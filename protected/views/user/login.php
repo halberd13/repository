@@ -56,6 +56,7 @@ if(isset($error)) echo $error;
         <?php echo $form->error($model,'rememberMe'); ?>
     </div>
         
-    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+    <button class="btn btn-small btn-primary" type="submit">Sign in</button>
+    <button class="btn btn-small btn-warning" type="reset">Reset</button>
 <?php $this->endWidget(); ?>
 </div>

@@ -28865,3 +28865,6 @@ REQUEST_URI=/jakut/index.php?r=kelurahan
 in C:\xampp\htdocs\jakut\protected\views\kelurahan\index.php (222)
 in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (45)
 in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 15:57:50 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)

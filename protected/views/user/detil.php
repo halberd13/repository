@@ -9,7 +9,6 @@ print_r($model);
 ?>
 
 <table class="table table-striped" id="page-table" >
-        
         <tr>
             <thead>
                 <th>No</th>
@@ -38,9 +37,7 @@ print_r($model);
             <th colspan="4">
                 <button class="btn btn-small btn-primary" data-toggle="modal" data-target=".bs-save">Add</button>
                 <a target="_blank" class="btn btn-small btn-info" href="<?php // echo Yii::app()->request->baseUrl;?>/index.php/?r=kecamatan/print&kec_id=<?php // echo $data[0];?>">Print All</a>
-                
             </th>
-            
         </tr>
         <?php } ?>
     
