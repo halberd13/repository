@@ -1,0 +1,129 @@
+<div align="right" style="margin-right: 10px;"> 
+<!-- Form for highchart all kelurahan -->
+        <form name="form-all-kelurahan" id="form-param-chart-jakut" method="POST" action="<?php echo Yii::app()->homeUrl; ?>/?r=jakut">
+            <h5>
+            Category 
+            <select id="select-tahun" name="category" onchange="getChart()" style="width: auto;">
+                <?php if(isset($select)){
+                    echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
+                }
+                foreach($category as $categorys){
+                    echo '<option value="'.$categorys->idc_category.'">'.$categorys->idc_category.'</option>';
+                }
+                ?>
+            </select>
+            Tahun 
+            <select id="select-tahun" name="tahun" onchange="getChart()" style="width: auto;">
+                <?php if(isset($select)){
+                    echo '<option selected value="'.$select[0].'">'.$select[0].'</option>';
+                } 
+                foreach($selectTahun as $thns){
+                    echo "<option value='".$thns['tahun']."'>".$thns['tahun']."</option>";
+                 }?>    
+                    
+            </select>
+            Bulan
+            <select id="select-bulan" name="bulan" onchange="getChart()" style="width: auto;">
+                <?php 
+                if(isset($select)){
+                    echo '<option selected value="'.$select[1][0].'">'.$select[1][1].'</option>';
+                }
+                
+                    foreach($category_bulan as $key=>$bulan){?>
+                    <option value="<?php echo $key;?>"><?php echo $bulan;?></option>
+                    <?php }?>
+            </select>
+            </h5>
+        </form>
+</div>
+<div id="jakut" class="box-chart" ></div>
+
+
+<table id='datatable' class="table table-hover table-striped">
+    <tr><td colspan="8" style="text-align: center;background: transparent;color: #cd0a0a;"><h4><marquee behavior=”scroll”>Informasi Data Indicator Jakarta Utara <?php if(isset($select[0])){ echo $select[0];}else { echo date('D, d M Y');}?></marquee></h4></td></tr>
+    <?php 
+    echo "<tr><td style='background-color:transparent;text-align: right;'><i>kecamatan</i></td>";
+        foreach($listKecamatan as $val){
+            echo "<td rowspan=2 style='vertical-align:middle;background-color:#DDFFAA;'><b>".$val['kec_nama'].'</b></td>';
+        }
+        echo "<td rowspan=2 style='text-align: center;vertical-align:middle;background-color:#DDFFAA;'><b>Total</b></td>";
+    echo '</tr>';
+    echo '<tr><td style="background-color:transparent;"><i>indikator</i></td></tr>';
+    $i=0;
+    
+    foreach($namaIndicator as $lists){
+        echo '<tr><td style="background-color:mediumaquamarine;">'.$lists['idc_nama'].'</td>';
+        $total=0;
+        $satuan=null;
+        foreach($dataIndicator[$i] as $row){
+            if($row['idc_nama']==$lists['idc_nama']){
+               echo "<td style='text-align: center;'>".$row['dt_value'].'</td>';
+               $total=$total+$row['dt_value'];
+               $satuan=$row['idc_satuan'];
+            }
+        }
+        echo "<td style='text-align: left;'>".$total.' '.$satuan."</td>";
+        echo '</tr>';
+     $i++;}?>
+    
+    <tr style="text-align: right;background-color:transparent"></tr>
+    <?php if(!Yii::app()->user->isGuest){ ?>
+        <tr>
+            <th colspan="9" style="text-align: left;background-color:transparent;">
+                <a target="_blank" class="btn btn-small btn-primary" href="<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=jakut/print&thn=<?php if(isset($select[0])){ echo $select[0];}else { echo date('Y');}?>&bln=<?php echo $select[1][0];?>">Print All</a>
+            </th>
+            
+        </tr>
+        <?php } ?>
+</table>
+
+<script type="text/javascript" language="javascript">
+    function getChart(){
+        document.getElementById('form-param-chart-jakut').submit();
+    }
+    $(function () {
+        // Create the chart
+        $('#jakut').highcharts({
+            chart: {
+                type : 'column',
+                backgroundColor:'rgba(255, 255, 255, 0.1)',
+            },
+            title: {
+                text: 'Data Statistik Jakarta Utara Tahun '+ <?php if(isset($select[0])){ echo $select[0];}else {echo date('Y');}?>
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                    title: {
+                        text: 'Jumlah'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+            legend: {
+                enabled: false
+            },
+            
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            series: <?php echo $series;?>,
+            drilldown: {
+                series: <?php echo $drilldown;?>
+            }
+        });
+    });
+
+
+    
+    
+</script>
