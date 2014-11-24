@@ -35,6 +35,7 @@ class UserController extends Controller
                 $password = $model->password;
                 $rm = $model->rememberMe;
                 $identity = new UserIdentity($username, $password);
+                
                 if ($identity->authenticate()) {
                     if (isset($_POST['rm']) and $_POST['rm'] == "on") {
                         Yii::app()->user->login($identity, 3600 * 24 * 7);
@@ -64,7 +65,7 @@ class UserController extends Controller
                 $model->username=$user['username'];
                 $model->password=  md5($user['password']);
                 $model->email= $user['email'];
-                $model->no_hp= '+62'.$user['no_hp'];
+                $model->no_hp= $user['no_hp'];
                 $model->level=$user['level'];
                 $model->last_update= new CDbExpression('NOW()');
                 if($user['level']=='kelurahan'){
@@ -77,7 +78,7 @@ class UserController extends Controller
                 if($model->save()){
                     Yii::app()->request->redirect("index.php?r=user&rc=00");
                 }else{
-                    Yii::app()->request->redirect("index.php?r=user&rc=63");
+                    throw new CHttpException(091,'Failed Insert Database, Check something wrong in your database.');
                 }
                 
                 
@@ -122,7 +123,7 @@ class UserController extends Controller
                     if($model->updateByPk($user['user_id'], $model )){
                         Yii::app()->request->redirect("index.php?r=user&rc=00");
                     }else{
-                        Yii::app()->request->redirect("index.php?r=user&rc=63");
+                        throw new CHttpException(091,'Failed Update Database, Check something wrong in your database.');
                     }
                 }else{
                     if($model->updateByPk($user['user_id'], array(
@@ -133,13 +134,25 @@ class UserController extends Controller
                         'last_update'=>$model->last_update))){
                         Yii::app()->request->redirect("index.php?r=user&rc=00");
                     }else{
-                        Yii::app()->request->redirect("index.php?r=user&rc=00");
+                        throw new CHttpException(091,'Failed Insert Database, Check something wrong in your database.');
                     }
                 }
                  
             }
         
         }
+        
+        public function actionDelete(){
+            if(isset($_POST['deleteUser'])){
+                $user = new User();
+                if($user->deleteByPk($_POST['user_id'])){
+                    echo '1';
+                }else{ 
+                    throw new CHttpException(091,'Failed Insert Database, Check something wrong in your database.');
+                }
+            }
+        }
+        
 
         public function actionLogout()
 	{

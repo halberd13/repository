@@ -109,6 +109,18 @@ idc_category varchar(255) not null,
 PRIMARY KEY (idc_id) 
 )
 
+CREATE TABLE DT_INDICATOR(
+dt_id int NOT NULL AUTO_INCREMENT,
+idc_id varchar(255) not null,
+kel_id varchar(255) not null,
+dt_value varchar(255) not null,
+dt_periode varchar(6) not null,
+dt_last_update datetime not null,
+PRIMARY KEY(dt_id),
+FOREIGN KEY (idc_id) REFERENCES INDICATOR(idc_id),
+FOREIGN KEY (kel_id) REFERENCES KELURAHAN(kel_id)
+)
+
 
 
 CREATE TABLE USER(
@@ -119,6 +131,11 @@ level varchar(50) not null,
 last_update date,
 PRIMARY KEY (user_id));
 
+CREATE TABLE CATEGORY(
+ctg_id varchar(255) not null,
+ctg_nama varchar(255) not null,
+ctg_last_update datetime,
+PRIMARY KEY (ctg_id));
 
 
 

@@ -176,7 +176,7 @@ class Kelurahan extends CActiveRecord
         
         public static function getDetilIndicatorInYears($kel_id,$thn){
             $list = Yii::app()->db->createCommand()
-                ->selectDistinct('a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan')
+                ->selectDistinct('a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan,b.dt_keterangan')
                 ->from('kelurahan a')
                 ->join('dt_indicator b', 'a.kel_id=b.kel_id')
                 ->join('indicator c', 'b.idc_id=c.idc_id')
@@ -189,7 +189,7 @@ class Kelurahan extends CActiveRecord
         
         public static function getDetilIndicator($kel_id,$idc_id, $thn=null){
             $list = Yii::app()->db->createCommand()
-                ->selectDistinct('b.dt_id,a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan')
+                ->selectDistinct('b.dt_keterangan, b.dt_id,a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan')
                 ->from('kelurahan a')
                 ->join('dt_indicator b', 'a.kel_id=b.kel_id')
                 ->join('indicator c', 'b.idc_id=c.idc_id')

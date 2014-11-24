@@ -29,23 +29,32 @@
             <div class="container">
                 <a class="brand" href="#">WEB GIS</a>
                     <?php 
-                        
-                        $this->widget('zii.widgets.CMenu',array(
-                            'items'=>array(
-                                    array('label'=>'Home', 'url'=>array('/home')),
-                                    array('label'=>'Kecamatan', 'url'=>array('/kecamatan'), 'visible'=>!Yii::app()->user->isGuest),
-                                    array('label'=>'Kelurahan', 'url'=>array('/kelurahan'), 'visible'=>!Yii::app()->user->isGuest),
-//                                    array('label'=>'Puskesmas', 'url'=>array('/puskesmas'), 'visible'=>!Yii::app()->user->isGuest),
-                                    array('label'=>'Jakarta Utara', 'url'=>array('/jakut'), 'visible'=>!Yii::app()->user->isGuest),
-                                    array('label'=>'Statistik', 'url'=>array('/statistik'), 'visible'=>!Yii::app()->user->isGuest),
-                                    array('label'=>'User', 'url'=>array('/user'), 'visible'=>!Yii::app()->user->isGuest),
-//                                    array('label'=>'Login', 'url'=>array('/user'),'visible'=>Yii::app()->user->isGuest),
-                                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest )
+                        if(isset(Yii::app()->user->level)){
+                            $this->widget('zii.widgets.CMenu',array(
+                                'items'=>array(
+                                        array('label'=>'Home', 'url'=>array('/home')),
+                                        array('label'=>'Kelurahan', 'url'=>array('/kelurahan'), 'visible'=>!Yii::app()->user->isGuest),
+                                        array('label'=>'Kecamatan', 'url'=>array('/kecamatan'), 'visible'=>!Yii::app()->user->isGuest),
+    //                                    array('label'=>'Puskesmas', 'url'=>array('/puskesmas'), 'visible'=>!Yii::app()->user->isGuest),
+                                        array('label'=>'Jakarta Utara', 'url'=>array('/jakut'), 'visible'=>!Yii::app()->user->isGuest),
+                                        array('label'=>'Statistik', 'url'=>array('/statistik'), 'visible'=>!Yii::app()->user->isGuest),
+                                        array('label'=>'User', 'url'=>array('/user'), 'visible'=>Yii::app()->user->level!='guest'),
+    //                                    array('label'=>'Login', 'url'=>array('/user'),'visible'=>Yii::app()->user->isGuest),
+                                        array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest )
 
-                            ),
-                            'htmlOptions' =>  array( 'class' => 'nav' ),
+                                ),
+                                'htmlOptions' =>  array( 'class' => 'nav' ),
 
-                        ));
+                            ));
+                        }else {
+                            $this->widget('zii.widgets.CMenu',array(
+                                'items'=>array(
+                                        array('label'=>'Home', 'url'=>array('/home')),
+                                ),
+                                'htmlOptions' =>  array( 'class' => 'nav' ),
+
+                            ));
+                        }
                         if (Yii::app()->user->isGuest) {?>
                         <a class="login" href="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=user/login">Login</a>
                         <?php } ?>

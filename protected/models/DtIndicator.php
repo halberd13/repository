@@ -10,10 +10,11 @@
  * @property string $dt_value
  * @property string $dt_periode
  * @property string $dt_last_update
+ * @property string $dt_keterangan
  *
  * The followings are the available model relations:
- * @property Kelurahan $kel
  * @property Indicator $idc
+ * @property Kelurahan $kel
  */
 class DtIndicator extends CActiveRecord
 {
@@ -33,12 +34,12 @@ class DtIndicator extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idc_id, kel_id, dt_value, dt_periode, dt_last_update', 'required'),
+			array('idc_id, kel_id, dt_value, dt_periode, dt_last_update, dt_keterangan', 'required'),
 			array('idc_id, kel_id, dt_value', 'length', 'max'=>255),
 			array('dt_periode', 'length', 'max'=>6),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('dt_id, idc_id, kel_id, dt_value, dt_periode, dt_last_update', 'safe', 'on'=>'search'),
+			array('dt_id, idc_id, kel_id, dt_value, dt_periode, dt_last_update, dt_keterangan', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,8 +51,8 @@ class DtIndicator extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'kel' => array(self::BELONGS_TO, 'Kelurahan', 'kel_id'),
 			'idc' => array(self::BELONGS_TO, 'Indicator', 'idc_id'),
+			'kel' => array(self::BELONGS_TO, 'Kelurahan', 'kel_id'),
 		);
 	}
 
@@ -67,6 +68,7 @@ class DtIndicator extends CActiveRecord
 			'dt_value' => 'Dt Value',
 			'dt_periode' => 'Dt Periode',
 			'dt_last_update' => 'Dt Last Update',
+			'dt_keterangan' => 'Dt Keterangan',
 		);
 	}
 
@@ -94,6 +96,7 @@ class DtIndicator extends CActiveRecord
 		$criteria->compare('dt_value',$this->dt_value,true);
 		$criteria->compare('dt_periode',$this->dt_periode,true);
 		$criteria->compare('dt_last_update',$this->dt_last_update,true);
+		$criteria->compare('dt_keterangan',$this->dt_keterangan,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -110,7 +113,6 @@ class DtIndicator extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        
         public static function getDataIndicator($kel_id, $thn, $idc_id=null){
             $row = Yii::app()->db->createCommand()
                     ->select('dt_id, idc_id, kel_id, dt_value,left(dt_periode,4) as dt_periode')
@@ -121,6 +123,4 @@ class DtIndicator extends CActiveRecord
                     ->queryAll();
             return $row;
         }
-        
-        
 }

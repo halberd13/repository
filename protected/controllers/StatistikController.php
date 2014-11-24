@@ -8,6 +8,8 @@ class StatistikController extends Controller
             $kelurahan = new Kelurahan();
             $dtIndicator = new DtIndicator();
             $indicator = new Indicator();
+            $category = new Category();
+            $listCategory = $category->findAll();
             $listKelurahan = $kelurahan->findAll('kel_id=kel_id order by kel_nama');
             $categoryBulan = $kelurahan->getListMonth();
             $categoryKecamatan=array();
@@ -88,6 +90,7 @@ class StatistikController extends Controller
                     'category_kel' => json_encode($categoryKelurahan),  
                     'series_kel' => json_encode($seriesKelurahan),  
                     'category_bulan' => $categoryBulan,  
+                    'listCategory' => $listCategory,  
                 ));
 
             

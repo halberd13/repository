@@ -17,7 +17,7 @@
                         <th>Alamat</th>
                         <th>Lintang</th>
                         <th>Bujur</th>
-                        <?php if(!Yii::app()->user->isGuest){ ?>
+                        <?php if(Yii::app()->user->level!='guest'){ ?>
                         <th class="action" style="text-align: center; width: 100px;">actions</th>
                         <?php } ?>
                     </tr>

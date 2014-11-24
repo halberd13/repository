@@ -28868,3 +28868,1553 @@ in C:\xampp\htdocs\jakut\index.php (13)
 2014/11/14 15:57:50 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
 in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
 in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:10:08 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:16:51 [error] [php] Undefined index: all (C:\xampp\htdocs\jakut\protected\models\Kelurahan.php:210)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\models\Kelurahan.php (210)
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (55)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:35:01 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\jakut\protected\controllers\JakutController.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (35)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:36:47 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\jakut\protected\controllers\JakutController.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (35)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:37:36 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\jakut\protected\controllers\JakutController.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (35)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:37:58 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\jakut\protected\controllers\JakutController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (36)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:39:18 [error] [php] Undefined index: all (C:\xampp\htdocs\jakut\protected\models\Kelurahan.php:210)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\models\Kelurahan.php (210)
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (55)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/14 16:39:42 [error] [php] Undefined index: all (C:\xampp\htdocs\jakut\protected\models\Kelurahan.php:210)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut
+in C:\xampp\htdocs\jakut\protected\models\Kelurahan.php (210)
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (55)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/17 22:10:23 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/17 22:10:30 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/17 22:24:15 [error] [exception.CException] exception 'CException' with message 'Indicator and its behaviors do not have a method or closure named "commit".' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('commit', Array)
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(260): CActiveRecord->__call('commit', Array)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(260): Indicator->commit()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:31:25 [error] [exception.CException] exception 'CException' with message 'Indicator and its behaviors do not have a method or closure named "commit".' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('commit', Array)
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): CActiveRecord->__call('commit', Array)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): Indicator->commit()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:35:23 [error] [exception.CException] exception 'CException' with message 'Indicator and its behaviors do not have a method or closure named "commit".' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('commit', Array)
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): CActiveRecord->__call('commit', Array)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): Indicator->commit()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:37:41 [error] [exception.CException] exception 'CException' with message 'Indicator and its behaviors do not have a method or closure named "commit".' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('commit', Array)
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): CActiveRecord->__call('commit', Array)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): Indicator->commit()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:39:16 [error] [exception.CException] exception 'CException' with message 'Indicator and its behaviors do not have a method or closure named "commit".' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('commit', Array)
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): CActiveRecord->__call('commit', Array)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(265): Indicator->commit()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:41:55 [error] [exception.CException] exception 'CException' with message 'Property "Indicator.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CActiveRecord->__get('rollback')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#13 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:52:00 [error] [exception.CException] exception 'CException' with message 'Property "Indicator.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(274): CActiveRecord->__get('rollback')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#13 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/17 22:53:56 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(274): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 08:53:20 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/18 08:53:39 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(272): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 08:56:46 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(270): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 08:57:25 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(270): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 09:00:43 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 09:08:20 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 09:09:57 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 10:15:40 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 10:25:50 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(271): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#7 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 10:27:37 [error] [php] Undefined variable: transactionIndicator (C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (271)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/18 10:31:43 [error] [exception.CException] exception 'CException' with message 'Property "CDbTransaction.rollback" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(273): CComponent->__get('rollback')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddInformasi()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addInformasi')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addIn...')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/18 10:41:35 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.dsn" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(220): CComponent->__set('dsn', 'mysql:host=loca...')
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 10:42:29 [error] [exception.CException] exception 'CException' with message 'Alias "yii.db" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\jakut\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(196): YiiBase::import('yii\\db\\Connecti...', true)
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 10:44:40 [error] [exception.CException] exception 'CException' with message 'Alias "yii.db" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\jakut\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(196): YiiBase::import('\\yii\\db\\Connect...', true)
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 10:45:28 [error] [exception.CException] exception 'CException' with message 'Alias "...yii.db" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\jakut\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(196): YiiBase::import('..\\yii\\db\\Conne...', true)
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 10:46:15 [error] [exception.CException] exception 'CException' with message 'Alias "jakut.yii.db" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\jakut\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(196): YiiBase::import('jakut\\yii\\db\\Co...', true)
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 10:46:24 [error] [exception.CException] exception 'CException' with message 'Alias "jakut.yii.db" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\jakut\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\YiiBase.php(196): YiiBase::import('\\jakut\\yii\\db\\C...', true)
+#1 C:\xampp\htdocs\jakut\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#3 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#4 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Kelurahan))
+#6 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(7): CActiveRecord->__construct()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan')
+#19 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=statistik/
+---
+2014/11/18 11:07:53 [error] [php] Undefined variable: rc (C:\xampp\htdocs\jakut\protected\views\kelurahan\index.php:222)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KelurahanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KelurahanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(45): KelurahanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=kelurahan&rc=00
+in C:\xampp\htdocs\jakut\protected\views\kelurahan\index.php (222)
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (45)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:52:54 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:52:54 [error] [php] Undefined variable: getModel (C:\xampp\htdocs\jakut\protected\controllers\UserController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=user/login
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (43)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:53:34 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:53:34 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\jakut\protected\controllers\UserController.php:44)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=user/login
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (44)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:53:45 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:55:38 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/20 23:56:39 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 00:01:14 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:23:07 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:29:08 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:32:23 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:49:24 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:50:18 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 09:50:40 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 10:00:05 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 12:28:35 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 14:02:32 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 14:08:56 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 14:39:40 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 14:41:59 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 14:47:18 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:01:39 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:04:46 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:09:03 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:22:40 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:22:40 [error] [exception.CException] exception 'CException' with message 'Property "UserController.load" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\UserController.php(47): CComponent->__get('load')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php?r=user/login
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=user/login
+---
+2014/11/21 15:36:28 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:36:28 [error] [exception.CException] exception 'CException' with message 'Property "UserController.email" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\protected\controllers\UserController.php(39): CComponent->__get('email')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#12 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/jakut/index.php?r=user/login
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=user/login
+---
+2014/11/21 15:36:36 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 15:46:35 [error] [php] Undefined variable: total (C:\xampp\htdocs\jakut\protected\views\jakut\print.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): JakutController->renderFile()
+#1 C:\xampp\htdocs\jakut\protected\controllers\JakutController.php(133): JakutController->renderPartial()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): JakutController->actionPrint()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): JakutController->runAction()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): JakutController->runActionWithFilters()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): JakutController->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=jakut/print&thn=2014&bln=11
+in C:\xampp\htdocs\jakut\protected\views\jakut\print.php (29)
+in C:\xampp\htdocs\jakut\protected\controllers\JakutController.php (133)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 16:00:23 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=5eb0f8a8-4f56-11e4-ad15-002590d6684e
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 16:01:11 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=5eb0f8a8-4f56-11e4-ad15-002590d6684e
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 16:11:17 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=5eb0f8a8-4f56-11e4-ad15-002590d6684e
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 16:13:57 [error] [php] Illegal string offset 'dt_value' (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=5eb0f8a8-4f56-11e4-ad15-002590d6684e
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 17:43:23 [error] [exception.CHttpException.555] exception 'CHttpException' with message 'Failed Insert Database, The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:44:34 [error] [exception.CHttpException.555] exception 'CHttpException' with message 'Failed Insert Database, The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:46:37 [error] [exception.CHttpException.505] exception 'CHttpException' with message 'The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:46:59 [error] [php] Undefined index: ctg_category (C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:344)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (344)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 17:47:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kelurahan".' in C:\xampp\htdocs\jakut\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(270): CController->missingAction('kelurahan')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('kelurahan')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/kelur...')
+#3 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kelurahan".' in C:\xampp\htdocs\jakut\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(270): CController->missingAction('kelurahan')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('kelurahan')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/kelur...')
+#3 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:47:48 [error] [php] Missing argument 1 for CController::redirect(), called in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php on line 349 and defined (C:\xampp\htdocs\jakut\yii\framework\web\CController.php:1023)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (349)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 17:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kelurahan".' in C:\xampp\htdocs\jakut\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(270): CController->missingAction('kelurahan')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('kelurahan')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/kelur...')
+#3 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kelurahan".' in C:\xampp\htdocs\jakut\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(270): CController->missingAction('kelurahan')
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('kelurahan')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/kelur...')
+#3 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/kelurahan
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:50:52 [error] [exception.CHttpException.505] exception 'CHttpException' with message 'The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:51:23 [error] [exception.CHttpException.505] exception 'CHttpException' with message 'The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:51:40 [error] [exception.CHttpException.505] exception 'CHttpException' with message 'The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 17:53:09 [error] [exception.CHttpException.505] exception 'CHttpException' with message 'The specified post cannot be found.' in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:354
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionaddCategory()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('addCategory')
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/addCa...')
+#11 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/addCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/21 18:41:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a664ffb2-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW()).
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (364)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 18:41:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a664ffb2-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW())' in C:\xampp\htdocs\jakut\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(364): CActiveRecord->save()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionupdateCategory()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('updateCategory')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/updat...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/updateCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan&rc=00
+---
+2014/11/21 18:42:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a664ffb2-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW()).
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (364)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 18:42:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a664ffb2-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW())' in C:\xampp\htdocs\jakut\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(364): CActiveRecord->save()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionupdateCategory()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('updateCategory')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/updat...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/updateCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan&rc=00
+---
+2014/11/21 18:42:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '38ccde5e-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW()).
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (364)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 18:42:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '38ccde5e-716c-11e4-80b0-20107afa84f9' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `category` (`ctg_nama`, `ctg_id`, `ctg_last_update`) VALUES (:yp0, :yp1, NOW())' in C:\xampp\htdocs\jakut\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\jakut\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(364): CActiveRecord->save()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionupdateCategory()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('updateCategory')
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kelurahan/updat...')
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jakut/index.php?r=kelurahan/updateCategory
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan&rc=00
+---
+2014/11/21 19:02:29 [error] [php] Undefined variable: list (C:\xampp\htdocs\jakut\protected\views\kelurahan\index.php:202)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KelurahanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KelurahanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(48): KelurahanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionIndex()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=kelurahan
+in C:\xampp\htdocs\jakut\protected\views\kelurahan\index.php (202)
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (48)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 19:05:15 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=5b15c171-375f-11e4-a0eb-20107afa84f9
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 23:12:47 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/21 23:44:50 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php:230)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kelurahan/addInformasi
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (230)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/22 10:02:03 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/22 10:14:40 [error] [php] Undefined index: dt_keterangan (C:\xampp\htdocs\jakut\protected\views\kelurahan\detil.php:103)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KelurahanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KelurahanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php(173): KelurahanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KelurahanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KelurahanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KelurahanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KelurahanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KelurahanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kelurahan/detil&kel_id=0344a3bc-6400-11e4-b3e2-20107afa84f9
+in C:\xampp\htdocs\jakut\protected\views\kelurahan\detil.php (103)
+in C:\xampp\htdocs\jakut\protected\controllers\KelurahanController.php (173)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/22 11:08:26 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/23 21:45:04 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/23 21:46:44 [error] [php] Undefined offset: 3 (C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(146): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionDetil()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php/?r=kecamatan/detil&kec_id=9abc4c2c-4f56-11e4-ad15-002590d6684e
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\detil.php (60)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (146)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 08:51:33 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 09:04:50 [warning] [application] Failed to set unsafe attribute "privilege-kelurahan" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (63)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 09:04:50 [warning] [application] Failed to set unsafe attribute "privilege-kecamatan" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (63)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 09:33:32 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 09:41:58 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:01:33 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:01:46 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:06:29 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\HomeController.php(59): CController->render('index', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#24 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#25 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jakut/index.php
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=jakut
+---
+2014/11/24 10:21:34 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\HomeController.php(59): CController->render('index', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#24 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#25 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jakut/index.php
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=jakut
+---
+2014/11/24 10:21:36 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\JakutController.php(66): CController->render('index', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): JakutController->actionIndex()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('jakut')
+#20 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/jakut/index.php?r=jakut
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kecamatan
+---
+2014/11/24 10:21:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\UserController.php(54): CController->render('login', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#25 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jakut/index.php?r=user/login
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=kelurahan
+---
+2014/11/24 10:21:40 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\HomeController.php(59): CController->render('index', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#24 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#25 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jakut/index.php
+HTTP_REFERER=http://localhost:8080/jakut/index.php?r=jakut
+---
+2014/11/24 10:21:44 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.level" is not defined.' in C:\xampp\htdocs\jakut\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('level')
+#1 C:\xampp\htdocs\jakut\themes\bootstrap\views\layouts\main.php(41): CWebUser->__get('level')
+#2 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jakut\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\jakut\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\jakut\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\jakut\protected\controllers\HomeController.php(59): CController->render('index', Array)
+#14 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#15 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): CController->run('')
+#24 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#25 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\jakut\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jakut/
+---
+2014/11/24 10:22:04 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:22:27 [error] [php] Object of class CWebUser could not be converted to string (C:\xampp\htdocs\jakut\protected\views\kecamatan\index.php:1)
+Stack trace:
+#0 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(869): KecamatanController->renderFile()
+#1 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(782): KecamatanController->renderPartial()
+#2 C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php(42): KecamatanController->render()
+#3 C:\xampp\htdocs\jakut\yii\framework\web\actions\CInlineAction.php(49): KecamatanController->actionIndex()
+#4 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(133): KecamatanController->runAction()
+#6 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\jakut\yii\framework\web\filters\CInlineFilter.php(58): KecamatanController->filterAccessControl()
+#9 C:\xampp\htdocs\jakut\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\jakut\yii\framework\web\CController.php(265): KecamatanController->runActionWithFilters()
+#12 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(282): KecamatanController->run()
+#13 C:\xampp\htdocs\jakut\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\jakut\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\jakut\index.php(13): CWebApplication->run()
+REQUEST_URI=/jakut/index.php?r=kecamatan
+in C:\xampp\htdocs\jakut\protected\views\kecamatan\index.php (1)
+in C:\xampp\htdocs\jakut\protected\controllers\KecamatanController.php (42)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:50:29 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:52:53 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:58:51 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:59:09 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 10:59:52 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)
+2014/11/24 11:00:01 [warning] [application] Failed to set unsafe attribute "rememberMe" of "User".
+in C:\xampp\htdocs\jakut\protected\controllers\UserController.php (33)
+in C:\xampp\htdocs\jakut\index.php (13)

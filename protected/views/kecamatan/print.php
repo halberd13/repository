@@ -8,54 +8,56 @@
     
 <table class="table table-striped table-hover" id="page-table" >
         <tr>
-            <th colspan="14" style="text-align: center;"><h4>Rincian Informasi Kecamatan</h4></th>
+            <th colspan="15" style="text-align: center;"><h4>Rincian Informasi Kecamatan</h4></th>
         </tr>
         <tr>
-            <th style="max-width: 100px;">Nama Kecamatan</th>
+            <th colspan="2" style="max-width: 100px;">Nama Kecamatan</th>
             <th>:</th>
             <th colspan="4" style="max-width: 100px;"><?php echo $data[1];?></th>
             <th rowspan="4" colspan="13"><img id="img-map"/></th>
         </tr>
         <tr>
-            <th>Alamat</th>
+            <th colspan="2">Alamat</th>
             <th>:</th>
             <th colspan="4" ><?php echo $data[2];?></th>
         </tr>
         <tr>
-            <th>Lintang</th>
+            <th colspan="2">Lintang</th>
             <th>:</th>
             <th colspan="4" ><?php echo $data[3];?></th>
         </tr>
         <tr>
-            <th>Bujur</th>
+            <th colspan="2">Bujur</th>
             <th>:</th>
             <th colspan="4"><?php echo $data[4];?></th>
         </tr>
         <tr>
-            <th colspan="14" style="text-align: center;"> 
+            <th colspan="15" style="text-align: center;"> 
                 Informasi Data Indicator <?php $_GET['thn'];?>
             </th>
         </tr>
         <?php 
-        echo "<tr><td style='text-align: right;background-color: transparent;'><i>Month</i></td>";
+        echo "<tr><td rowspan='2' style='text-align: center;'>No</td>"
+        . "<td style='text-align: right;background-color: transparent;'><i>Month</i></td>";
         foreach($listMonth as $key=>$month){
             echo "<th rowspan=2 style='text-align: center;vertical-align: middle;background-color:lightgreen;'>".$month."</th>";
         }
-        echo "<th rowspan=2 style='text-align: center;vertical-align: middle;background-color:lightgreen;'>Total</th>";
+        echo "<th rowspan=2 style='text-align: center;vertical-align: middle;background-color:lightgreen;'>Satuan</th>";
         echo "</tr>";
-        echo "<tr><td style='text-align: right;background-color: transparent;'><i>Indikator</i></td></tr>";
+        echo "<tr><td style='text-align: left;background-color: transparent;'><i>Indikator</i></td></tr>";
         $x=0;
+        $no=1;
         foreach($listIndicator as $listIndicators){
-            echo "<tr><th style='background-color: lightsteelblue;'>".$listIndicators->idc_nama."</th>";
-            $total=0;
+            echo "<tr><td>".$no."</td>"
+            . "<th style='background-color: lightsteelblue;'>".$listIndicators->idc_nama."</th>";
             
             for($i=0;$i<12;$i++){
                 echo "<td style='text-align: center;'>".$dataIndicator[$x][$i]['dt_value']."</td>";
-                $total=$total+$dataIndicator[$x][$i]['dt_value']; 
             }
-            echo '<td style="text-align: left;">'.$total.' '.$listIndicators->idc_satuan.'</td>';
+            echo '<td style="text-align: left;">'.$listIndicators->idc_satuan.'</td>';
             echo "</tr>";
         $x++;
+        $no++;
         }?>
         <tr>
             <th colspan="4">

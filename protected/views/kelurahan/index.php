@@ -26,7 +26,7 @@
                         <th>Alamat</th>
                         <th>Lintang</th>
                         <th>Bujur</th>
-                        <?php if(!Yii::app()->user->isGuest){ ?>
+                        <?php if(Yii::app()->user->level!='guest'){ ?>
                         <th class="action" style="text-align: center; width: 100px;">Actions</th>
                         <?php } ?>
                     </tr>
@@ -51,7 +51,7 @@
     
 </div>
 
-
+<!-- Modal Add Kebutuhan data -->
 <div class="modal fade" id="modal-form-kebutuhan-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -71,9 +71,9 @@
           <div class="form-group">
             <label for="exampleInputColumn">Kategori</label>
             <select id="category">
-                <option value="Sosial">Sosial</option>
-                <option value="Kesehatan">Kesehatan</option>
-                <option value="Pemberdayaan Masyarakat dan Perempuan">Pemberdayaan Masyarakat dan Perempuan</option>
+                <?php foreach($listCategory as $lists){
+                    echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                }?>
             </select>
           </div>
       </div>
@@ -85,7 +85,7 @@
   </div>
 </div>
 
-
+<!-- Modal Warning For Delete Kelurahan -->
 <div class="modal fade" id="alert">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -106,6 +106,7 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- Modal Update Data kelurahan -->
 <div class="modal fade" id="modal-update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -130,7 +131,7 @@
               </fieldset>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" id="submit" class="btn btn-primary">Save changes</button>
           </div>
       </form>
@@ -138,29 +139,25 @@
   </div>
 </div>    
     
+<!-- Modal show kebutuhan data -->
     <div class="modal fade" id="modal-list-kebutuhan-data">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>List Data Indicator</h3>
+            <p>
+                <h3>List Data Indicator </h3>
+                <a id="btn-show-list-category" style="float: right;" data-dismiss="modal"><strong>List Category</strong></a>
+            </p>
+            
         </div>
         <div class="modal-body">
+            
             <table class="table table-hover">
                 <tr>
-                    <th>
-                        No
-                    </th>
-                    <th>
-                        Data Indicator
-                    </th>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        Satuan
-                    </th>
-                    <th>
-                        Actions
-                    </th>
+                    <th>No</th>
+                    <th>Data Indicator</th>
+                    <th>Category</th>
+                    <th>Satuan</th>
+                    <th>Actions</th>
                 </tr>
                 <?php $i=1;foreach($listIndicator as $dt){
                     echo "<tr>";
@@ -181,6 +178,7 @@
         </div>
     </div>
 
+<!-- Modal Edit kebutuhan data -->
     <div class="modal fade" id="modal-edit-kebutuhan-data">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -200,9 +198,9 @@
               <div class="form-group">
                 <label for="exampleInputColumn">Kategori</label>
                 <select id="update-category">
-                    <option value="Sosial">Sosial</option>
-                    <option value="Kesehatan">Kesehatan</option>
-                    <option value="Pemberdayaan Masyarakat dan Perempuan">Pemberdayaan Masyarakat dan Perempuan</option>
+                    <?php foreach($listCategory as $lists){
+                        echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                    }?>
                 </select>
               </div>
           </div>
@@ -212,11 +210,106 @@
             <a href="#" class="btn btn-primary" id="btn-save-update-data-indicator" data-dismiss="modal">Save & Close</a>
         </div>
     </div>
+    
+<!-- Modal Show list category -->    
+<div class="modal fade bs-example-modal-sm" id="modal-show-list-category" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>List Category</h3>
+    </div>
+    <div class="modal-content">
+        <div class="modal-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>No</th>
+                    <th>Category</th>
+                    <th>Last Update</th>
+                    <th>Actions</th>
+                </tr>
+                <?php $i=1;foreach($listCategory as $ctg){
+                    echo "<tr>";
+                    echo "<td>".$i."</td>";
+                    echo "<td>".$ctg['ctg_nama']."</td>";
+                    echo "<td>".$ctg['ctg_last_update']."</td>";
+                    echo "<td style='min-width: 150px;'><a class='btn btn-small btn-warning btn-edit-category' id='".$ctg['ctg_id']."' name='".$ctg['ctg_nama']."' data-dismiss='modal'>Edit</a> "
+                            . "<a class='btn btn-small btn-danger btn-delete-category' id='".$ctg['ctg_id']."' data-dismiss='modal' >delete</a></td>";
+                    echo "</tr>";
+                $i++;}?>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-success btn-close-update-data-indicator" data-dismiss="modal" id="btn-close-update-data-indicator">Back</a>
+        <a href="#" class="btn btn-primary" id="btn-add-new-category" data-dismiss="modal">Add New Category</a>
+    </div>
+  </div>
+</div>
 
+
+<!-- Modal Add New Category -->
+<div class="modal fade bs-example-modal-sm" id="modal-add-new-category" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Form Category</h3>
+    </div>
+    <form action="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=kelurahan/addCategory" method="POST">
+    <div class="modal-content">
+        <div class="modal-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Nama Category</th>
+                    <th>:</th>
+                    <th><input type="text" class="input-medium" name="ctg_nama"></th>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-success btn-close-update-data-indicator" data-dismiss="modal" id="btn-close-update-data-indicator">Back</a>
+        <button class="btn btn-primary" type="submit">Save & Close</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Edit Category -->
+<div class="modal fade bs-example-modal-sm" id="modal-edit-category">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Form Category</h3>
+    </div>
+    <form action="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=kelurahan/updateCategory" method="POST">
+    <div class="modal-content">
+        <div class="modal-body">
+            <table class="table table-hover">
+                <tr>
+                <input type="hidden" class="input-medium" name="upd-ctg_id" id="upd-ctg_id">
+                    <th>Nama Category</th>
+                    <th>:</th>
+                    <th><input type="text" class="input-medium" name="upd-ctg_name" id="upd-ctg_name"></th>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-success btn-close-update-data-indicator" data-dismiss="modal" id="btn-close-update-data-indicator">Back</a>
+        <button class="btn btn-primary" type="submit">Save & Close</button>
+    </div>
+    </form>
+  </div>
+</div>
 
 <script type="text/javascript" language="javascript">
     var kec_id;
     var rNamaIndicator;
+    
+
+       
     $(document).ready(function() {
         $('#data').dataTable({
             "data": <?php echo $model; ?>,
@@ -229,6 +322,15 @@
         $('#modal-update').hide();
         $('#alert').hide();
         $('.modal').hide();
+        
+        $('#btn-add-new-category').click(function (){
+            $('#modal-add-new-category').modal('show');
+        });
+        
+        $('#btn-show-list-category').click(function (){
+            $('#modal-show-list-category').modal('show');
+        });
+        
         $('#btn-list-kebutuhan-data').click(function (){
             $('#modal-list-kebutuhan-data').modal('show');
         });
@@ -238,6 +340,15 @@
         $('#close-modal-form-kebutuhan-data').click(function (){
             $('#modal-list-kebutuhan-data').modal('show');
         })
+        
+        $('.btn-edit-category').click(function (){
+            rCtgID = $(this).attr('id');
+            rCtgName = $(this).attr('name');
+            $('#upd-ctg_id').val(rCtgID);
+            $('#upd-ctg_name').val(rCtgName);
+            $('#modal-edit-category').modal('show');
+        })
+        
         
         $('.btn-edit-data-indicator').click(function (){
             rIDIndicator = $(this).attr('id');
@@ -265,12 +376,11 @@
                     category : tCategory
                 })
                     .done(function( data ) {
-                        if(data!='0'){
-                            alert("Data Indicator di " +data + " Kelurahan yang terdaftar, berhasil ditambahkan")
-                            $("#success").slideDown(400);
-                             location.reload();
+                        if(data!=null){
+                            alert( data )
+                            location.reload();
                         }else{
-                            $("#error").slideDown(500).fadeOut(500);
+                            alert("Data gagal diproses");
                         }
                     });
         });
@@ -280,20 +390,28 @@
             var tNama = $("#update-column").val();
             var tSatuan = $("#update-satuan").val();
             var tCategory = $("#update-category").val();
-                $.post( "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/updateInformasi", {
-                    updateIndicator : true,
-                    idc_id : tIDIndicator,
-                    nama : tNama,
-                    satuan : tSatuan,
-                    category : tCategory
-                })
-                .done(function( data ) {
+            var ajaxTime= new Date().getTime();
+            var request= $.ajax( {
+                url : "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/updateInformasi", 
+                data : {
+                        updateIndicator : true,
+                        idc_id : tIDIndicator,
+                        nama : tNama,
+                        satuan : tSatuan,
+                        category : tCategory
+                },
+                dataType: 'JSON'});
+                request.done(function( data ) {
                     if(data==1){
-                        $("#success").slideDown(500).delay( 2000 ).fadeOut(500);
+                        $("#success").slideDown(500);
                         location.reload();
                     }else{
-                        $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
+                        $("#error").slideDown(500);
                     }
+                });
+                request.fail(function (jqXHR, textStatus ){
+                    alert(textStatus);
+                    $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
                 });
         })
         
@@ -313,6 +431,27 @@
                     });
         })
         
+        //Action Delete Category
+        $('.btn-delete-category').click(function (){
+            if (!confirm('Anda yakin ingin menghapus data ini ?'))
+            return false;
+            rctg_id = $(this).attr('id');
+            var url =  "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=kelurahan/deleteCategory"
+                $.post(url , { deleteCategory : true ,ctg_id : rctg_id } )
+                    .done(function(data){
+                        if(data==1){
+                            $("#success").slideDown(500).delay( 2000 ).slideUp(500);
+                            alert("Data berhasil dihapus");
+                             location.reload();
+                        }else{
+                            alert("Data gagal dihapus");
+                            $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
+                        }
+                        
+                    });
+        })
+        
+         //Action Delete Data Indicator
         $('.btn-delete-data-indicator').click(function (){
             if (!confirm('Menghapus Data ini akan mengakibatkan \n'
                           + 'data indicator disetiap kelurahan akan ikut terhapus\n'
@@ -331,6 +470,17 @@
                         
                     });
         })
+        
+        
+        
+        
+       //Check Status Update kelurahan
+           var rc = "<?php if(isset($_GET['rc'])){echo $_GET['rc'];}?>";
+           if(rc=="00"){
+               alert("Data Berhasil Di Update");
+           }else if(rc=="05"){
+               alert("Data Gagal Di Update");
+           }
         
         
     });    
@@ -370,6 +520,9 @@
             $('#modal-update').modal('show');
     };
     
+  
+    
+    
     
     function runProgress(){
         $('.html5-progress-bar').show();
@@ -386,7 +539,9 @@
             $('.progress-value').html(value + '%');
 
             if (value == max) {
-                clearInterval(animate);			           
+                clearInterval(animate);
+                $("#error").slideDown(500);
+//                location.reload();
             }
         };
 

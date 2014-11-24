@@ -13,10 +13,12 @@
         <select id="select-category" onchange="getChart()" name="category" style="width: auto;">
             <?php if(isset($select)){
                 echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
-            }?>
-                <option value="Sosial">Sosial</option>
-                <option value="Kesehatan">Kesehatan</option>
-                <option value="Pemberdayaan Masyarakat dan Perempuan">Pemberdayaan Masyarakat dan Perempuan</option>
+            }
+            foreach($listCategory as $lists){
+                echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+            }
+            ?>
+            
         </select>
         Tahun 
         <select id="select-tahun" onchange="getChart()" name="tahun" style="width: auto;">
@@ -37,10 +39,11 @@
             <select id="select-category" onchange="getChartAll()" name="category" style="width: auto;">
                 <?php if(isset($select)){
                     echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
-                }?>
-                    <option value="Sosial">Sosial</option>
-                    <option value="Kesehatan">Kesehatan</option>
-                    <option value="Pemberdayaan Masyarakat dan Perempuan">Pemberdayaan Masyarakat dan Perempuan</option>
+                }
+                foreach($listCategory as $lists){
+                    echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                }
+                ?>
             </select>
             Tahun 
             <select id="select-tahun" name="tahun" onchange="getChartAll()" style="width: auto;">
@@ -97,6 +100,10 @@
     
     $(function () {
             $('#statistik-all-kelurahan').highcharts({
+                chart: {
+                    type: 'column',
+                    backgroundColor:'rgba(255, 255, 255, 0.1)'
+                },
                 title: {
                     text: '<strong>Statistik Data Indikator Kelurahan Jakarta Utara</strong>',
                     x: -20 //center

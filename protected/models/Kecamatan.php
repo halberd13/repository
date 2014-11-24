@@ -168,7 +168,19 @@ class Kecamatan extends CActiveRecord
             return $list;
         }
         
-        
+        public static function getAllDataIndicatorJakarta($dt_periode,$idc_category=null){
+            $list = Yii::app()->db->createCommand()
+                    ->select('b.idc_id, a.idc_nama,sum(b.dt_value) as dt_value,  b.dt_periode , a.idc_satuan')
+                    ->from('indicator a')
+                    ->join('dt_indicator b', 'a.idc_id = b.idc_id')
+                    ->join('kelurahan c', 'b.kel_id=c.kel_id')
+                    ->join('kecamatan d', 'c.kec_id=d.kec_id')
+                    ->where('left(b.dt_periode,4)=:dt_periode and a.idc_category=:idc_category', array(':idc_category'=>$idc_category,':dt_periode'=>$dt_periode))
+                    ->group('a.idc_id')
+                    ->order('a.idc_nama')
+                    ->queryAll();
+            $list;
+        }
         
         public static function getDataIndicatorJakarta($dt_periode,$idc_category=null){
             if($idc_category==null){

@@ -19,13 +19,13 @@
    
 <table  class="table table-striped table-hover" style="min-width: 800px;">
         <tr>
-            <th colspan="14" style="text-align: center;background-color: lightgray"><h3>Rincian Informasi Kelurahan</h3></th>
+            <th colspan="15" style="text-align: center;background-color: lightgray"><h3>Rincian Informasi Kelurahan</h3></th>
         </tr>
         <tr>
             <th>Nama Kecamatan</th>
             <th>:</th>
             <th><?php echo $data[5];?></th>
-            <th rowspan="5" colspan="10" style="text-align: center;max-width: 260px;"><img id="img-map"/></div></th>
+            <th rowspan="5" colspan="5" style="text-align: center;max-width: 230px;"><img id="img-map"/></div></th>
         </tr>
         <tr>
             <th>Nama Kelurahan</th>
@@ -48,7 +48,7 @@
             <th><?php echo $data[4];?></th>
         </tr>
         <tr>
-            <th colspan="14" style="text-align: center;background-color: lightgray">
+            <th colspan="15" style="text-align: center;background-color: lightgray">
                 <form id="form-tahun" method="POST" action="<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/detil&kel_id=<?php echo $_GET['kel_id'];?>">
                 <h3>Informasi Indicator Kelurahan Tahun
                     <select name="tahun" onchange="selectTahun()" id="tahun" style="width: auto;" class="form-control">
@@ -68,15 +68,15 @@
                     
             </th>
         </tr>
-        <tr><td id='table-indicator' colspan="14" style="text-align: center;">
+        <tr><td id='table-indicator' colspan="15" style="text-align: center;">
             <table id='datatable' class="table table-striped table-hover">
                 <tr>
+                    <td rowspan="2" style="text-align: right;background-color: transparent;">No</td>
                     <td style="text-align: right;background-color: transparent;"><i>Month</i></td>
                     <?php 
                     foreach($data[6] as $key=>$bulan){
                        echo '<th rowspan=2 style="text-align: center;vertical-align: middle;background-color:lightgreen;">'.$bulan.'</th>'; 
                     }
-                    echo '<th rowspan=2 style="text-align: center;vertical-align: middle;background-color:lightgreen;">Total</th>'; 
                     if(Yii::app()->user->level=='admin'){
                         echo "<th rowspan='2' style='vertical-align: middle;background-color:lightgreen;'>actions</th>";
                     }else if(Yii::app()->user->level=='kelurahan' && Yii::app()->user->privilege==$_GET['kel_id']){
@@ -88,17 +88,19 @@
                     <td><i>Data Indicator</i></td>
                 </tr>
                 <?php 
+                    $no=1;
                     for($i=0;$i<count($headerTableIndicator);$i++){
                         $totalRow=0;
-                        echo "<tr><th style='background-color: lightsteelblue;'>".$headerTableIndicator[$i]['idc_nama']."</th>";
+                        echo "<tr><th>".$no."</th>"
+                        . "<th style='background-color: lightsteelblue;'>".$headerTableIndicator[$i]['idc_nama']."</th>";
                             for($x=0; $x<count($rowInfoKelurahan);$x++){
                                 $rowTahun = substr($rowInfoKelurahan[$x]['dt_periode'],0,-2);
                                 if($headerTableIndicator[$i]['idc_id']==$rowInfoKelurahan[$x]['idc_id']){
                                     if(isset($data[7]) && $rowTahun==$data[7]){
-                                        echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
+                                        echo "<td style='text-align: center;'><button class='btn btn-default' data-toggle='popover' data-content='<p>".$rowInfoKelurahan[$x]['dt_keterangan']."</p>'>".$rowInfoKelurahan[$x]['dt_value']."</button></td>";
                                         $totalRow=$totalRow+$rowInfoKelurahan[$x]['dt_value'];
                                     }else if($rowTahun==date('Y')){
-                                        echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
+                                        echo "<td style='text-align: center;'><button class='btn btn-default' data-toggle='popover' data-content='<p>".$rowInfoKelurahan[$x]['dt_keterangan']."</p>'>".$rowInfoKelurahan[$x]['dt_value']."</button></td>";
                                         $totalRow=$totalRow+$rowInfoKelurahan[$x]['dt_value'];
                                     }else{
                                             echo "<td>empty</td>";
@@ -107,7 +109,6 @@
                                 }
                                     
                             }
-                            echo "<td style='text-align: left;'>".$totalRow." ".$headerTableIndicator[$i]['idc_satuan']."</td>";
                             $idc_id = $headerTableIndicator[$i]['idc_id'];
                             $idc_nama = $headerTableIndicator[$i]['idc_nama'];
                             if(Yii::app()->user->level=='admin'){
@@ -120,17 +121,16 @@
                                 }
                             }
                         echo "</tr>";
+                        $no++;
                     }
                 ?>
             </table>
         </td></tr>
-        <?php if(!Yii::app()->user->isGuest){ ?>
         <tr>
             <th colspan="4">
                 <a target="_blank" class="btn btn-small btn-info" href="<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=kelurahan/print&kel_id=<?php echo $_GET['kel_id'];?>&thn=<?php if(isset($data[7]))echo $data[7];?>">Print All</a>
             </th>
         </tr>
-        <?php } ?>
 </table>
 </div>
 
@@ -142,8 +142,8 @@
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title title-update">Update Informasi Indicator</h4>
       </div>
-      <div class="modal-body">
-          <div class="form-group" id="form-update-data-indicator"></div>
+      <div class="modal-body" > 
+          <table class="table-hover" id='form-update-data-indicator' style="width: 100%;"></table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -161,7 +161,7 @@
     
 var lat = <?php echo $data[3];?>;
 var lng = <?php echo $data[4];?>;
-var src = 'http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=380x260&markers=color:red|' + lat + ',' + lng + '&maptype=roadmap';
+var src = 'http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=320x260&markers=color:red|' + lat + ',' + lng + '&maptype=roadmap';
 var rc=null;
         
 
@@ -172,14 +172,14 @@ var rc=null;
         $('#img-map').attr('src', src);
         $('#progress-bar').hide();
         
+        //Do for update each 12 month selected of Indicator 
         $('#do-update').click(function (){
             var tmp_data={};
             var data=[];
             
             for(i=0;i<12;i++){
-                data[i] = [$('#dt-id'+[i]).val(),$('#dt-data'+[i]).val(),$('#dt-periode'+[i]).val()];
+                    data[i] = [$('#dt-id'+[i]).val(),$('#dt-data'+[i]).val(),$('#dt-periode'+[i]).val(),$('#dt-keterangan'+[i]).val().replace(/\n/g, "<br />")];
             }
-            
             tmp_data = {
                 "kel_id": $('#kel-id'+[0]).val(),
                 "idc_id": $('#idc-id'+[0]).val(),
@@ -199,12 +199,18 @@ var rc=null;
                 }else{
                     alert(rc + " Data Gagal diupdate"); 
                 }
-            });
-            
-            
-            
-            
+            }); 
         });
+        
+        
+        $(function () {
+          $('[data-toggle="popover"]').popover({
+              placement: 'top',
+              html: true,
+              container: 'body',
+              title : 'Keterangan',
+          })
+        })
         
     });
     
@@ -225,12 +231,16 @@ var rc=null;
                
                 for(var i=0;i<rData.length;i++){
                    $("#form-update-data-indicator").append(
-                        "<input id='idc-id" + [i] +"' value='" + rData[i]['idc_id'] + "' type='hidden'>"
+                        "<tr><td><div class='form-group'>"   
+                        + "<input id='idc-id" + [i] +"' value='" + rData[i]['idc_id'] + "' type='hidden'>"
                         + "<input id='dt-id" + [i] +"' value='" + rData[i]['dt_id'] + "' type='hidden'>"
                         + "<input id='kel-id" + [i] +"' value='" + rData[i]['kel_id'] + "' type='hidden'>"
-                        +  "<label for='exampleInputInformation'>Periode</label>"
+                        +  "<label for='exampleInputInformation'><strong>Periode : Value</strong></label>"
                         + "<input id='dt-periode" + [i] +"' type='text' disabled value='" + rData[i]['dt_periode'] + "'> : "
                         + "<input id='dt-data" + [i] +"' type='text' title='Jumlah Data' value='" + rData[i]['dt_value'] + "'>"
+                        +  "<label for='exampleInputInformation'><i>Keterangan</i></label>"
+                        + "<textarea  id='dt-keterangan" + [i] +"' class='input-xlarge' title='Keterangan'>" + rData[i]['dt_keterangan'].replace(/\<br \/\>/g, "\n") + "</textarea>"
+                        + "</div></td></tr><tr><td style='border-bottom-style:dashed;border-width:2px;'></td></tr>"
                    );
                } 
             });  

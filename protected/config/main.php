@@ -45,6 +45,10 @@ return array(
                         'locked'=>false,//this is the on off switch
                         'redirectURL'=>'http://www.gsp.co.id',
                     ),
+                'swiftMailer' => array(
+                    'class' => 'ext.swiftMailer.SwiftMailer',
+                ),    
+                
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -64,7 +68,7 @@ return array(
 		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=jakut',
-			'emulatePrepare' => true,
+                        'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',

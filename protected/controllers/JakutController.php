@@ -12,7 +12,6 @@ class JakutController extends Controller
                 $series = array();
                 $drillDown = array();
                 $tmpDrill=array();
-                
                 $tmp = array();
                 $dataIndicator = array();
                 
@@ -21,6 +20,7 @@ class JakutController extends Controller
                     $bulan = $_POST['bulan'];
                     $dCategory = $_POST['category'];
                     $arrKec = $kecamatan->getDataIndicatorJakarta($tahun.$bulan,$dCategory);
+                    
                 }else{
                     $tahun=date('Y');
                     $bulan=date('m');
@@ -39,7 +39,6 @@ class JakutController extends Controller
                     array_push($dataIndicator, $tmpDrill);
                     $tmpDtKec = array();
                     foreach($tmpDrill as $tmpDrills){
-                        
                         array_push($tmpDtKec, array($tmpDrills['kec_nama'], (int)$tmpDrills['dt_value']));
                     }
                     array_push($drillDown, array(

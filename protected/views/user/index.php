@@ -26,6 +26,7 @@ if(isset($error)){echo $error;}
                                 <option value="admin">Admin</option>
                                 <option value="kecamatan">Admin Kecamatan</option>
                                 <option value="kelurahan">Admin Kelurahan</option>
+                                <option value="guest">User Guest</option>
                             </select>
                             <div id="select-kelurahan">
                                 <label>Read/Edit Kelurahan</label>
@@ -47,7 +48,7 @@ if(isset($error)){echo $error;}
                       </div>
                       <div class="modal-footer">
                           <button type="button" class="btn btn-default" id="btn-close-add-user">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save & Close</button>
                       </div>
                   </form>
                 </td>
@@ -64,25 +65,28 @@ if(isset($error)){echo $error;}
                 <th>Contact</th>
                 <th>Level</th>
                 <th>Last Update</th>
+                 <?php if(Yii::app()->user->level != 'guest'){?>
                 <th>Actions</th>
+                 <?php } ?>
             </tr>
 
         </thead>
             <?php $i=1;foreach ($model as $val){ ?>
             <tr>
-                <td><?php echo $i;?></td>
+                <td style="text-align: center;"><?php echo $i;?></td>
                 <td><?php echo $val['username'];?></td>
                 <td><?php echo $val['email'];?></td>
                 <td><?php echo $val['no_hp'];?></td>
                 <td><?php echo $val['level'];?></td>
                 <td><?php echo $val['last_update'];?></td>
+                <?php if(Yii::app()->user->level != 'guest'){?>
                 <td>
                     <a class='btn btn-mini btn-success btn-xs' title='edit' onclick="showUpdate('<?php echo $val['user_id'];?>')"><i class='icon-pencil'></i></a>&nbsp;
-                    <?php if(Yii::app()->user->username == 'admin'){?>
-                    <a class='btn btn-mini btn-danger delete' title='delete'><i class='icon-trash'></i></a>
+                    <?php  if(Yii::app()->user->username == 'admin'){?>
+                    <a class='btn btn-mini btn-danger' onclick="deleteUser('<?php echo $val['user_id'];?>')" title='delete'><i class='icon-trash'></i></a>
                     <?php } ?>
                 </td>
-            <?php $i++;} ?>
+            <?php } $i++;}?>
             </tr>
             <tfoot>
                 <?php if(Yii::app()->user->username == 'admin'){?>
@@ -125,6 +129,7 @@ if(isset($error)){echo $error;}
                             <option value="admin">Admin</option>
                             <option value="kecamatan">Admin Kecamatan</option>
                             <option value="kelurahan">Admin Kelurahan</option>
+                            <option value="guest">User Guest</option>
                         </select>
                         <fieldset id="upd-select-kelurahan">
                             <label>Read/Edit Kelurahan</label>
@@ -230,6 +235,20 @@ if(isset($error)){echo $error;}
             $('#select-kecamatan').slideDown();
         }
     }
+    
+    
+    function deleteUser(user_id){
+        if (!confirm('Anda yakin ingin menghapus data ini ?'))
+            return false;
+        var url =  "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=user/delete"
+                $.post(url , { deleteUser : true ,user_id : user_id } )
+                    .done(function(data){
+                        if(data==1){
+                             location.reload();
+                        }
+                    });
+    }
+    
     
     var rc = <?php if(isset($_GET['rc'])){echo $_GET['rc'];}else echo "null";?>;
     if(rc=='01'){
