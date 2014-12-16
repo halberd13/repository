@@ -1,15 +1,8 @@
-<div class="alert alert-block alert-success" id="success">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Success!</strong> Data has been changed.
-</div>
-<div class="alert alert-block alert-error" id="error">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Failed!</strong> Data failed to change.
-</div> 
+
 
 <div class="demo-wrapper html5-progress-bar">
     <div class="progress-bar-wrapper">
-        <h4>Loading for Input Data Indicator...</h4>
+        <h4>Loading for Input Data Indicator Kelurahan...</h4>
             <progress id="progressbar" value="0" max="100"></progress>
             <span class="progress-value">0%</span>
     </div>
@@ -17,7 +10,7 @@
 <div class="col-lg-10">
     <div class="panel panel-default">
         <div class="panel-body">
-            <table id="data" class="table table-striped table-hover">
+            <table id="data" class="table-detil table-striped table-hover">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -35,7 +28,7 @@
                 </thead>
                 <?php if (Yii::app()->user->level=='admin'){?>
                 <tfoot>
-                    <th colspan="7">
+                <th colspan="7" style="text-align: left;">
                         <?php if(!Yii::app()->user->isGuest){ ?>
                             <a class="btn btn-small btn-primary" id="tambah-kelurahan" href="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=kelurahan/add">Tambah Kelurahan</a>
                             
@@ -79,7 +72,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" id="close-modal-form-kebutuhan-data" data-dismiss="modal">Back</button>
-        <button id="save-kebutuhan-data" type="button" class="btn btn-primary" data-dismiss="modal" onclick="runProgress()">Save</button>
+        <button id="save-kebutuhan-data" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
       </div>
     </div>
   </div>
@@ -145,28 +138,30 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <p>
                 <h3>List Data Indicator </h3>
-                <a id="btn-show-list-category" style="float: right;" data-dismiss="modal"><strong>List Category</strong></a>
+                <a href="#" id="btn-show-list-category" style="float: right;" data-dismiss="modal"><strong>List Category</strong></a>
             </p>
             
         </div>
         <div class="modal-body">
             
-            <table class="table table-hover">
-                <tr>
-                    <th>No</th>
-                    <th>Data Indicator</th>
-                    <th>Category</th>
-                    <th>Satuan</th>
-                    <th>Actions</th>
-                </tr>
+            <table class="table table-hover" id="table-list-indicator">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Data Indicator</th>
+                        <th>Category</th>
+                        <th>Satuan</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
                 <?php $i=1;foreach($listIndicator as $dt){
                     echo "<tr>";
                     echo "<td>".$i."</td>";
                     echo "<td>".$dt['idc_nama']."</td>";
                     echo "<td  style='min-width: 100px;'>".$dt['idc_category']."</td>";
                     echo "<td>".$dt['idc_satuan']."</td>";
-                    echo "<td style='min-width: 150px;'><a class='btn btn-small btn-warning btn-edit-data-indicator' id='".$dt['idc_id']."' value='".$dt['idc_nama']."' category='".$dt['idc_category']."' satuan='".$dt['idc_satuan']."' data-dismiss='modal'>Edit</a> "
-                            . "<a class='btn btn-small btn-danger btn-delete-data-indicator' value='".$dt['idc_id']."' data-dismiss='modal' >delete</a></td>";
+                    echo "<td style='min-width: 100px;'><a class='btn btn-small btn-warning btn-edit-data-indicator' id='".$dt['idc_id']."' value='".$dt['idc_nama']."' category='".$dt['idc_category']."' satuan='".$dt['idc_satuan']."' data-dismiss='modal'><i class='icon-pencil'></i></a> "
+                            . "<a class='btn btn-small btn-danger btn-delete-data-indicator' value='".$dt['idc_id']."' data-dismiss='modal' ><i class='icon-trash'></i></a></td>";
                     echo "</tr>";
                 $i++;}?>
             </table>
@@ -221,21 +216,25 @@
     <div class="modal-content">
         <div class="modal-body">
             <table class="table table-hover">
-                <tr>
-                    <th>No</th>
-                    <th>Category</th>
-                    <th>Last Update</th>
-                    <th>Actions</th>
-                </tr>
-                <?php $i=1;foreach($listCategory as $ctg){
-                    echo "<tr>";
-                    echo "<td>".$i."</td>";
-                    echo "<td>".$ctg['ctg_nama']."</td>";
-                    echo "<td>".$ctg['ctg_last_update']."</td>";
-                    echo "<td style='min-width: 150px;'><a class='btn btn-small btn-warning btn-edit-category' id='".$ctg['ctg_id']."' name='".$ctg['ctg_nama']."' data-dismiss='modal'>Edit</a> "
-                            . "<a class='btn btn-small btn-danger btn-delete-category' id='".$ctg['ctg_id']."' data-dismiss='modal' >delete</a></td>";
-                    echo "</tr>";
-                $i++;}?>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Category</th>
+                        <th>Last Update</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                
+                    <?php $i=1;foreach($listCategory as $ctg){
+                        echo "<tr>";
+                        echo "<td>".$i."</td>";
+                        echo "<td>".$ctg['ctg_nama']."</td>";
+                        echo "<td>".$ctg['ctg_last_update']."</td>";
+                        echo "<td style='min-width: 150px;'><a class='btn btn-small btn-warning btn-edit-category' id='".$ctg['ctg_id']."' name='".$ctg['ctg_nama']."' data-dismiss='modal'>Edit</a> "
+                                . "<a class='btn btn-small btn-danger btn-delete-category' id='".$ctg['ctg_id']."' data-dismiss='modal' >delete</a></td>";
+                        echo "</tr>";
+                    $i++;}?>
+                
             </table>
         </div>
     </div>
@@ -288,6 +287,7 @@
             <table class="table table-hover">
                 <tr>
                 <input type="hidden" class="input-medium" name="upd-ctg_id" id="upd-ctg_id">
+                <input type="hidden" class="input-medium" name="upd-old_ctg_name" id="upd-old_ctg_name">
                     <th>Nama Category</th>
                     <th>:</th>
                     <th><input type="text" class="input-medium" name="upd-ctg_name" id="upd-ctg_name"></th>
@@ -308,12 +308,14 @@
     var kec_id;
     var rNamaIndicator;
     
-
-       
     $(document).ready(function() {
         $('#data').dataTable({
             "data": <?php echo $model; ?>,
             "deferRender": true
+        });
+//        $('.container-animation').hide();
+        $('#table-list-indicator').dataTable({
+            "paging":   false,
         });
         $('.html5-progress-bar').hide();
         $('#modal-kebutuhan-data').hide();
@@ -346,6 +348,7 @@
             rCtgName = $(this).attr('name');
             $('#upd-ctg_id').val(rCtgID);
             $('#upd-ctg_name').val(rCtgName);
+            $('#upd-old_ctg_name').val(rCtgName);
             $('#modal-edit-category').modal('show');
         })
         
@@ -366,23 +369,27 @@
         })
         
         $("#save-kebutuhan-data").click(function (){
+            runProgress();
             var tColumn = $("#column").val();
             var tSatuan = $("#satuan").val();
             var tCategory = $("#category").val();
-                $.post( "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/addInformasi", {
-                    addIndicator : true,
-                    namaIndicator : tColumn,
-                    satuan : tSatuan,
-                    category : tCategory
-                })
-                    .done(function( data ) {
-                        if(data!=null){
-                            alert( data )
+            var request = 
+                    $.ajax( {
+                        url : "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/addInformasi", 
+                        data :{
+                                addIndicator : true,
+                                namaIndicator : tColumn,
+                                satuan : tSatuan,
+                                category : tCategory
+                            },
+                        type: "POST",
+                        dataType: "html",
+                        complete : function(){
+                            alert("Data Indicator berhasil ditambahkan");
                             location.reload();
-                        }else{
-                            alert("Data gagal diproses");
-                        }
-                    });
+                        },
+                    })
+                    
         });
         
         $('#btn-save-update-data-indicator').click(function (){
@@ -392,26 +399,21 @@
             var tCategory = $("#update-category").val();
             var ajaxTime= new Date().getTime();
             var request= $.ajax( {
-                url : "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/updateInformasi", 
-                data : {
-                        updateIndicator : true,
-                        idc_id : tIDIndicator,
-                        nama : tNama,
-                        satuan : tSatuan,
-                        category : tCategory
-                },
-                dataType: 'JSON'});
-                request.done(function( data ) {
-                    if(data==1){
-                        $("#success").slideDown(500);
+                    url : "<?php echo Yii::app()->homeUrl; ?>/?r=kelurahan/updateInformasi", 
+                    data : {
+                            updateIndicator : true,
+                            idc_id : tIDIndicator,
+                            nama : tNama,
+                            satuan : tSatuan,
+                            category : tCategory
+                    },
+                    dataType: 'html',
+                    type: "POST",
+                    global: false,
+                    complete : function(){
+                        alert("Data Indicator diupdate");
                         location.reload();
-                    }else{
-                        $("#error").slideDown(500);
-                    }
-                });
-                request.fail(function (jqXHR, textStatus ){
-                    alert(textStatus);
-                    $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
+                    },
                 });
         })
         
@@ -422,10 +424,10 @@
                 $.post(url , { id : id } )
                     .done(function(data){
                         if(data==1){
-                            $("#success").slideDown(500).delay( 2000 ).slideUp(500);
+                            alert("Data berhasil dihapus")
                              location.reload();
                         }else{
-                            $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
+                            alert("Data gagal dihapus");
                         }
                         
                     });
@@ -433,19 +435,17 @@
         
         //Action Delete Category
         $('.btn-delete-category').click(function (){
-            if (!confirm('Anda yakin ingin menghapus data ini ?'))
+            if (!confirm('Jika Category ini dihapus, maka seluruh data indicator yang berkaitan dengan category ini akan ikut terhapus \n Anda yakin ingin menghapus data ini ?'))
             return false;
             rctg_id = $(this).attr('id');
             var url =  "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=kelurahan/deleteCategory"
                 $.post(url , { deleteCategory : true ,ctg_id : rctg_id } )
                     .done(function(data){
                         if(data==1){
-                            $("#success").slideDown(500).delay( 2000 ).slideUp(500);
                             alert("Data berhasil dihapus");
                              location.reload();
                         }else{
                             alert("Data gagal dihapus");
-                            $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
                         }
                         
                     });
@@ -462,10 +462,9 @@
                 $.post(url , { deleteInformasi : true ,idc_id : idc_id } )
                     .done(function(data){
                         if(data==1){
-                            $("#success").slideDown(500).delay( 2000 ).slideUp(500);
                              location.reload();
                         }else{
-                            $("#error").slideDown(500).delay( 2000 ).fadeOut(500);
+                            alert("Data gagal dihapus");
                         }
                         
                     });
@@ -493,8 +492,8 @@
 
     function showUpdate(tID){   
         kec_id = tID;
-        var url = "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=kelurahan/update";
-        jQuery.post( url, { id : kec_id })
+        var url = "<?php echo Yii::app()->request->baseUrl;?>/index.php?r=kelurahan/update";
+        $.post( url, { id : kec_id })
             .done(function( data ) {
                 var tData = JSON.parse(data);
                 $('#upd-id').val(tData[0]);
@@ -540,8 +539,6 @@
 
             if (value == max) {
                 clearInterval(animate);
-                $("#error").slideDown(500);
-//                location.reload();
             }
         };
 
@@ -549,6 +546,10 @@
             loading();
         }, time);
     }
+ 
+    $( document ).ajaxError(function( event, request, settings ) {
+        alert( "Error requesting page " + settings.url + event );
+    });
 
     
 </script>

@@ -174,7 +174,20 @@ class Kelurahan extends CActiveRecord
             return $data;
         }
         
-        public static function getDetilIndicatorInYears($kel_id,$thn){
+        public static function getDetilIndicatorInYears($kel_id,$thn,$ctg_nama){
+            $list = Yii::app()->db->createCommand()
+                ->selectDistinct('a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan,b.dt_keterangan')
+                ->from('kelurahan a')
+                ->join('dt_indicator b', 'a.kel_id=b.kel_id')
+                ->join('indicator c', 'b.idc_id=c.idc_id')
+                ->where('a.kel_id=:kel_id and left(b.dt_periode,4)=:thn and c.idc_category=:ctg_nama', array(':kel_id'=>$kel_id  ,':thn'=>$thn, ':ctg_nama'=>$ctg_nama))
+                ->order('b.dt_periode')  
+                ->queryAll();
+             
+            return $list;
+        }
+        
+        public static function getDetilAllIndicatorInYears($kel_id,$thn){
             $list = Yii::app()->db->createCommand()
                 ->selectDistinct('a.kel_id,a.kel_nama,c.idc_id,c.idc_nama,b.dt_value,b.dt_periode,c.idc_satuan,b.dt_keterangan')
                 ->from('kelurahan a')
@@ -214,13 +227,13 @@ class Kelurahan extends CActiveRecord
         
         public static function getDataIndicatorKelurahan($idc_id, $dt_periode){
             $list = Yii::app()->db->createCommand()
-                ->select('c.kel_nama, b.idc_nama, a.dt_value, a.dt_periode, b.idc_satuan')
+                ->select('c.kec_id, c.kel_nama, b.idc_nama, a.dt_value, a.dt_periode, b.idc_satuan')
                 ->from('dt_indicator a')
                 ->join('indicator b', 'a.idc_id=b.idc_id')
                 ->join('kelurahan c', 'a.kel_id=c.kel_id')
                 ->where('a.dt_periode=:dt_periode and b.idc_id=:idc_id', array(':idc_id'=>$idc_id,'dt_periode'=>$dt_periode))
                 ->group('c.kel_id')  
-                ->order('c.kel_nama')  
+                ->order('c.kec_id')  
                 ->queryAll();
             return $list;
         }

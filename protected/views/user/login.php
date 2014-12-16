@@ -36,8 +36,8 @@
 		'validateOnSubmit'=>true,
 	),
 )); 
-echo $form->errorSummary($model); 
-if(isset($error)) echo $error;
+echo "<i style=color:red;>".$form->errorSummary($model)."</i>"; 
+if(isset($error)) echo "<i style=color:red;>".$error."</i>";
 ?>
     <h2 class="form-signin-heading">Please sign in</h2>
     <div class="form-group">

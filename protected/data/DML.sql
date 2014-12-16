@@ -140,60 +140,21 @@ PRIMARY KEY (ctg_id));
 
 
 
+<!-- insert user kelurahan -->
+INSERT INTO jakut.`user` (user_id, username, password, `level`, last_update, privilege, email, no_hp) 
+select uuid(), concat('kel_',lower(replace(kel_nama,' ','_'))),md5(lower(concat('kesos',replace(kel_nama,' ','_')))), 'kelurahan', now(), kel_id, 'kel_nama@goverment.go.id', ''
+from kelurahan
+order by kel_nama 
 
 
 
+<!-- insert user Kecamatan -->
+INSERT INTO jakut.`user` (user_id, username, password, `level`, last_update, privilege, email, no_hp) 
+select uuid(), concat('kec_',lower(replace(kec_nama,' ','_'))) as username ,md5(lower(concat('kesos',replace(kec_nama,' ','_')))) as password, 'kecamatan', now(), kec_id, 'kec_nama@goverment.go.id', '021-222xxx'
+from kecamatan
+order by kec_nama 
 
-1	KEC. PENJARINGAN	P3175010101	Jl. Raya Telok Gong No.2, Kec. Penjaringan	Perawatan
-2	KEL. KAMAL MUARA	P3175010202	Jl. Kamal Muara Raya Rt 07/01, Kec. Penjaringan	Non Perawatan
-3	KEL. KAPUK MUARA	P3175010203	Jl. Kapuk Kamal No. 28, Kec. Penjaringan	Non Perawatan
-4	KEL. PEJAGALAN	P3175010204	Jl. Telok Gong Kav. Rt 003/12, Kec. Penjaringan	Non Perawatan
-5	KEL. PENJARINGAN I	P3175010205	Jl. Pluit Raya Selatan No.2, Kec. Penjaringan	Non Perawatan
-6	KEL. PENJARINGAN II	P3175010206	Jl. Rawa Bebek Rt 0016/10 Pasar Royal, Kec. Penjaringan	Non Perawatan
-7	KEL. PLUIT	P3175010207	Jl. Muara Angke, Kec. Penjaringan	Non Perawatan
-8	KEC. PADEMANGAN	P3175020201	Jl. Budi Mulya No.11, Kec. Pademangan	Non Perawatan
-9	KEL. ANCOL	P3175020202	Jl. Ancol Barat VIII, Kec. Pademangan	Non Perawatan
-10	KEL. PADEMANGAN BRT. I	P3175020203	Jl. Ampera Besar, Kec. Pademangan	Non Perawatan
-11	KEL. PADEMANGAN BRT. II	P3175020204	Jl. Waspada Raya Gg. B2, Kec. Pademangan	Non Perawatan
-12	KEL. PADEMANGAN TIMUR	P3175020205	Jl. Pademangan II Gg. 22/2, Kec. Pademangan	Non Perawatan
-13	KEC. TANJUNG PRIOK	P3175030101	Jl. Bugis No.63, Kec. Tanjung Priok	Perawatan
-14	KEL. SUNTER JAYA I	P3175030202	Jl. Sunter Jaya IV, Kec. Tanjung Priok	Non Perawatan
-15	KEL. SUNTER JAYA II	P3175030203	Jl. Komplek Kebersihan DKI, Kec. Tanjung Priok	Non Perawatan
-16	KEL. PAPANGGO I	P3175030204	Jl. Warakas X Gg D/69 Rt 006, Kec. Tanjung Priok	Non Perawatan
-17	KEL. SUNGAI BAMBU	P3175030205	Jl. Sungai Bambu IV/24, Kec. Tanjung Priok	Non Perawatan
-18	KEL. KEBON BAWANG I	P3175030206	Jl. Swasembada Barat VII/2, Kec. Tanjung Priok	Non Perawatan
-19	KEL. KEBON BAWANG II	P3175030207	Jl. Swasembada Timur VI/1, Kec. Tanjung Priok	Non Perawatan
-20	KEL. KEBON BAWANG III	P3175030208	Jl. Swasembada Barat II/83, Kec. Tanjung Priok	Non Perawatan
-21	KEL. TANJUNG PRIOK	P3175030209	Jl. Bahari III/65, Kec. Tanjung Priok	Non Perawatan
-22	KEL. SUNTER AGUNG I	P3175030210	Jl. Bambu Kuning Gg. II/1, Kec. Tanjung Priok	Non Perawatan
-23	KEL. SUNTER AGUNG II	P3175030211	Jl. Agung Barat 25 Blok B, Kec. Tanjung Priok	Non Perawatan
-24	KEL. SUNTER AGUNG III	P3175030212	Jl. Taman Nyiur Komp. Bl Blok P, Kec. Tanjung Priok	Non Perawatan
-25	KEL. W A R A K A S	P3175030213	Jl. Warakas IX/22, Kec. Tanjung Priok	Non Perawatan
-26	KEL. PAPANGGO II	P3175030214	Jl. Bisma Raya Komp. Kel. Papanggo, Kec. Tanjung Priok	Non Perawatan
-27	KEC. K O J A	P3175040101	Jl. Walang Permai No. 39, Kec. Koja	Perawatan
-28	KEL. K O J A	P3175040202	Jl. Deli Lorong 28/2, Kec. Koja	Non Perawatan
-29	KEL. L A G O A	P3175040203	Jl. Menteng No.30, Kec. Koja	Non Perawatan
-30	KEL. TUGU UTARA III	P3175040204	Jl. Mahoni No. 9, Kec. Koja	Non Perawatan
-31	KEL. TUGU UTARA I	P3175040205	Jl. Mahoni, Kec. Koja	Non Perawatan
-32	KEL. TUGU SELATAN	P3175040206	Jl. Bendungan Melayu Selatan Rt 001/05, Kec. Koja	Non Perawatan
-33	KEL. RAWA BADAK UTARA II	P3175040207	Jl. Rawa Binangun V Rt. 08/08, Kec. Koja	Non Perawatan
-34	KEL. RAWA BADAK UTARA I	P3175040208	Jl. Raya Kincir Rawa Badak Utara, Kec. Koja	Non Perawatan
-35	KEC. KELAPA GADING (PKC BARU)	P3175050101	Jl. Pelepah Elok, Kec. Kelapa Gading	Perawatan
-36	KEL. KELAPA GADING TMR. I	P3175050202	Komp. Perdagangan, Kec. Kelapa Gading	Non Perawatan
-37	KEL. KELAPA GADING TMR. II	P3175050203	Jl. Merah Jambu Blok EJ/22, Kec. Kelapa Gading	Non Perawatan
-38	KEL. PEGANGSAAN DUA A	P3175050204	Jl. Kesadaran Rt 005/01, Kec. Kelapa Gading	Non Perawatan
-39	KEL. PEGANGSAAN DUA B	P3175050205	Gandang, Kec. Kelapa Gading	Non Perawatan
-40	KEC. CILINCING	P3175060101	Jl. Madya Kebantenan IV, Kec. Cilincing	Perawatan
-41	KEL. KALIBARU	P3175060202	Jl. Kalibaru Timur 1/50, Kec. Cilincing	Non Perawatan
-42	KEL. CILINCING I	P3175060203	Jl. Pasar Pagi No.11A, Kec. Cilincing	Non Perawatan
-43	KEL. CILINCING II	P3175060204	Jl. Sungai Landak No.26, Kec. Cilincing	Non Perawatan
-44	KEL. SEMPER BARAT I	P3175060205	Jl. Durian No.49, Kec. Cilincing	Non Perawatan
-45	KEL. SEMPER BARAT II	P3175060206	Jl. Tipar Cakung No. 18 Rt 01, Kec. Cilincing	Non Perawatan
-46	KEL. SEMPER BARAT III	P3175060207	Jl. Pepaya V Blok S rt 06/016, Kec. Cilincing	Non Perawatan
-47	KEL. MARUNDA	P3175060208	Jl. Marunda Baru No.5 Rt 009/02, Kec. Cilincing	Non Perawatan
-48	KEL. SUKAPURA	P3175060209	Jl. Tipar Cakung, Kec. Cilincing	Non Perawatan
-49	KEL. ROROTAN	P3175060210	Jl. Manunggal Juang 19 No.4, Kec. Cilincing	Non Perawatan
-49	KEL. ROROTAN	P3175060210	Jl. Manunggal Juang 19 No.4, Kec. Cilincing	Non Perawatan
+
 
 
 
@@ -204,3 +165,8 @@ INSERT INTO `kelurahan`( `nama_kelurahan`, `alamat`, `kode_pos`, `kordinat_x`, `
 INSERT INTO `kelurahan`( `nama_kelurahan`, `alamat`, `kode_pos`, `kordinat_x`, `kordinat_y`) VALUES (uuid(),'DUMMY-JAKARTA UTARA 5','DUMMY-JAKARTA UATARA 1','440140','-6.161207','106.785681');
 INSERT INTO `kelurahan`( `nama_kelurahan`, `alamat`, `kode_pos`, `kordinat_x`, `kordinat_y`) VALUES (uuid(),'DUMMY-JAKARTA UTARA 6','DUMMY-JAKARTA UATARA 1','440150','-6.171207','106.785681');
 INSERT INTO `kelurahan`( `nama_kelurahan`, `alamat`, `kode_pos`, `kordinat_x`, `kordinat_y`) VALUES (uuid(),'DUMMY-JAKARTA UTARA 7','DUMMY-JAKARTA UATARA 1','440160','-6.181207','106.785681');
+
+
+ IP Address 185.28.20.22
+Username u430336273 
+Password = CT84e0npbFroNcOBRu

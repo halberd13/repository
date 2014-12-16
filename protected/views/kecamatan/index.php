@@ -1,18 +1,10 @@
-<div class="alert alert-block alert-success" id="success">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Success!</strong> Data has been changed.
-</div>
-<div class="alert alert-block alert-error" id="error">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Failed!</strong> Data failed to change.
-</div>
 <div class="col-lg-10">
     <div class="panel panel-default">
         <div class="panel-body">
-            <table id="data" class="table table-striped table-hover">
+            <table id="data" class="table-detil table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="max-width: 20px;text-align: center;">No</th>
                         <th>Nama Kecamatan</th>
                         <th>Alamat</th>
                         <th>Lintang</th>
@@ -21,15 +13,12 @@
                         <th class="action" style="text-align: center; width: 100px;">actions</th>
                         <?php } ?>
                     </tr>
-                
-                    
                 </thead>
-                
                 <tfoot>
                     
                         <?php if(Yii::app()->user->level=='admin'){ 
-                            echo "<th colspan='6'>";
-                            echo '<a class="btn btn-small btn-success btn-xs" style="text-align: left;" id="tambah-kecamatan" href="'.Yii::app()->request->baseUrl.'/index.php?r=kecamatan/add" data-toggle="tooltip" title="Tooltip on bottom">Tambah Kecamatan</a>';
+                            echo "<th colspan='6' style='text-align: left;'>'";
+                            echo '<a class="btn btn-small btn-primary btn-xs" style="text-align: left;" id="tambah-kecamatan" href="'.Yii::app()->request->baseUrl.'/index.php?r=kecamatan/add" data-toggle="tooltip" title="Tooltip on bottom">Tambah Kecamatan</a>';
                             echo "</th>";
                             
                         } ?>
@@ -96,16 +85,10 @@
     var kec_id;
     
     $(document).ready(function() {
-        $('#error').hide();
-        $('#success').hide();
         $('.modal').hide();
         $('#data').dataTable({
             "data": <?php echo $model; ?>,
         });
-        
-        
-        
-        
         
         $('#do-delete').click(function (){
             var id = $('#kec_id').val();

@@ -297,10 +297,10 @@ table.dataTable td {
  * Control feature layout
  */
 .dataTables_wrapper {
-  position: relative;
+  position: static;
   margin: 20px auto 20px;
   min-width: auto;
-  max-width: 900px;
+  max-width: 80%;
   clear: both;
   *zoom: 1;
   zoom: 1;
@@ -311,6 +311,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_filter {
   float: right;
   text-align: right;
+  
 }
 .dataTables_wrapper .dataTables_filter input {
   margin-left: 0.5em;

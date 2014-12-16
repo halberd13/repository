@@ -24,7 +24,7 @@ class JakutController extends Controller
                 }else{
                     $tahun=date('Y');
                     $bulan=date('m');
-                    $dCategory='Sosial';
+                    $dCategory=$category[0]['idc_category'];
                     $arrKec = $kecamatan->getDataIndicatorJakarta(date('Ym'),$dCategory);
                 }
                 
@@ -62,7 +62,7 @@ class JakutController extends Controller
                     'dataIndicator' => $dataIndicator,
                     'namaIndicator' => $arrKec,
                     'category_bulan' => $category_bulan,
-                    'category'=>$category
+                    'category'=>$category,
                 ));
 	}
         
@@ -72,7 +72,8 @@ class JakutController extends Controller
                 $kecamatan = new Kecamatan;
                 $indicator = new Indicator();
                 $dtIndicator = new DtIndicator();
-                $category = array();
+                $category = new Category();
+                $listCategory = $category->findAll('ctg_id=ctg_id order by ctg_nama');
                 $series = array();
                 $drillDown = array();
                 
@@ -128,11 +129,13 @@ class JakutController extends Controller
                     'dataIndicator' => $dataIndicator,
                     'namaIndicator' => $arrKec,
                     'category_bulan' => $category_bulan,
-                        'category'=>$category,
                     'namaBulan'=>$getNamaBulan,
+                    'listCategory'=> $listCategory,
                 ));
 	}
 
+        
+        
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
@@ -159,4 +162,25 @@ class JakutController extends Controller
 		);
 	}
 	*/
+        
+        public function accessRules() {
+            return array(
+                array('deny',
+                    'actions' => array('*'),
+                    'users' => array('?'),
+                ),
+                array('deny', 
+                    'deniedCallback' => function() {
+                        Yii::app()->request->redirect('index.php?r=user/login');
+                    },
+                    'users' => array('?'),
+                ),
+            );
+        }
+        
+        public function filters()
+	{
+                return array('accessControl');
+                
+	}
 }

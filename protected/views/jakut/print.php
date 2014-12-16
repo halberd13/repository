@@ -4,36 +4,45 @@
 <script src='<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js' type='text/javascript'></script>
 <script src='<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.dataTables.min.js' type='text/javascript'></script>
 
-
-<table id='datatable' class="table table-hover table-striped">
-    <tr><td colspan="8" style="text-align: center;background-color: darksalmon"><h4>Informasi Data Indicator Jakarta Utara <?php echo $namaBulan.' '.$_GET['thn']?></h4></td></tr>
+<table class="table table-hover table-striped">
+    <tr><td colspan="15" style="text-align: center;background-color: transparent;"><h4 style="color: red;">Informasi Data Indicator Jakarta Utara <?php echo $namaBulan.', '.$_GET['thn']?></h4></td></tr>
     <?php 
     echo "<tr><td rowspan=2>No</td>"
     . "<td style='background-color:transparent;text-align: right;'><i>kecamatan</i></td>";
         foreach($listKecamatan as $val){
-            echo "<td rowspan=2 style='vertical-align:middle;background-color:#DDFFAA;'><b>".$val['kec_nama'].'</b></td>';
+            echo "<td rowspan=2 style='vertical-align:middle;background-color: burlywood;'><b>".$val['kec_nama'].'</b></td>';
         }
-        
+    echo "<td rowspan=2 style='vertical-align:middle;background-color:burlywood;'><b>Satuan</b></td>";    
     echo '</tr>';
     echo '<tr><td style="background-color:transparent;"><i>indikator</i></td></tr>';
-    $i=0;
     
-    foreach($namaIndicator as $lists){
-        echo '<tr><td>'.$i.'</td>'
-                . '<td style="background-color:mediumaquamarine;">'.$lists['idc_nama'].'</td>';
-        foreach($dataIndicator[$i] as $row){
-            if($row['idc_nama']==$lists['idc_nama']){
-               echo "<td style='text-align: center;'>".$row['dt_value'].'</td>';
-            }
-        }
-        echo '</tr>';
-     $i++;}?>
-        <tr>
-            <th colspan="4">
-                <a class="btn btn-small btn-danger" id="print">Print Out</a>
-            </th>
+    foreach($listCategory as $ctgs){
+        echo "<tr><th colspan='15' style='background-color:#FFFFBF;'>".$ctgs->ctg_nama."</th></tr>";
+        $i=0;
+        $no=1;
+        foreach($namaIndicator as $lists){
+            if($lists['idc_category']==$ctgs->ctg_nama){
+                echo '<tr><td>'.$no.'</td>'
+                        . '<td style="background-color:mediumaquamarine;">'.$lists['idc_nama'].'</td>';
+                foreach($dataIndicator[$i] as $row){
+                    if($row['idc_nama']==$lists['idc_nama']){
+                       echo "<td style='text-align: center;'>".$row['dt_value'].'</td>';
+                    }
+                }
+                echo "<td>".$row['idc_satuan']."</td>";
+                echo '</tr>';
             
-        </tr>
+            $no++;}
+            
+        $i++;}
+    }
+     ?>
+    <tr>
+        <th colspan="4">
+            <a class="btn btn-small btn-danger" id="print">Print Out</a>
+        </th>
+
+    </tr>
 <script type="text/javascript" language="javascript">
     $(document).ready(function (){
         $('#print').click(function (){

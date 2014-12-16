@@ -78,7 +78,7 @@ class UserController extends Controller
                 if($model->save()){
                     Yii::app()->request->redirect("index.php?r=user&rc=00");
                 }else{
-                    throw new CHttpException(091,'Failed Insert Database, Check something wrong in your database.');
+                    throw new CHttpException( 091 ,'Failed Insert Database, Check something wrong in your database.');
                 }
                 
                 
@@ -93,7 +93,6 @@ class UserController extends Controller
                 $data = array();
                 array_push($data, $model->user_id);
                 array_push($data, $model->username);
-                array_push($data, $model->password);
                 array_push($data, $model->email);
                 array_push($data, $model->no_hp);
                 array_push($data, $model->level);
@@ -101,15 +100,14 @@ class UserController extends Controller
                 echo json_encode($data);
             }else if(isset($_POST['User'])){
                 $user=$_POST['User'];
-                if($user['password']!=$user['password2']){
-                    Yii::app()->request->redirect("index.php?r=user&rc=01");
-                }
+//                if($user['password']!=$user['password2']){
+//                    Yii::app()->request->redirect("index.php?r=user&rc=01");
+//                }
                 $model = new User;
                 $model->user_id=$user['user_id'];
                 $model->username=$user['username'];
                 $model->email=$user['email'];
                 $model->no_hp=$user['no_hp'];
-                $model->password=  md5($user['password']);
                 $model->last_update= new CDbExpression('NOW()');
                 if(Yii::app()->user->level=='admin'){
                     if($user['level']=='kelurahan'){
@@ -120,7 +118,11 @@ class UserController extends Controller
                         $model->privilege="all";
                     }
                     $model->level=$user['level'];
-                    if($model->updateByPk($user['user_id'], $model )){
+                    if($model->updateByPk($user['user_id'], array(
+                        'username'=>$model->username,
+                        'email'=>$model->email,
+                        'no_hp'=>$model->no_hp,
+                        'last_update'=>$model->last_update))){
                         Yii::app()->request->redirect("index.php?r=user&rc=00");
                     }else{
                         throw new CHttpException(091,'Failed Update Database, Check something wrong in your database.');
@@ -128,7 +130,6 @@ class UserController extends Controller
                 }else{
                     if($model->updateByPk($user['user_id'], array(
                         'username'=>$model->username,
-                        'password'=>$model->password,
                         'email'=>$model->email,
                         'no_hp'=>$model->no_hp,
                         'last_update'=>$model->last_update))){
@@ -141,6 +142,21 @@ class UserController extends Controller
             }
         
         }
+        
+        public function actionchangePassword(){
+            if(isset($_POST['changePassword']) && $_POST['changePassword']==true){
+                $user = new User();
+                $pwd = md5($_POST['new_password']);
+                $user_id = $_POST['user_id'];
+                if($user->updateByPk($user_id, array('password'=>$pwd))){
+                    echo "1";
+                }else{
+                    echo "0";
+                }
+            }
+        }
+        
+        
         
         public function actionDelete(){
             if(isset($_POST['deleteUser'])){

@@ -20,12 +20,12 @@ class KelurahanController extends Controller
                 array_push($row, $val->kel_kordinat_x);
                 array_push($row, $val->kel_kordinat_y);
                 if(Yii::app()->user->level=='admin'){ 
-                    array_push($row, "<a class='btn btn-mini btn-success how-update-kelurahan' title='edit' onclick='showUpdate(\"$val->kel_id\")'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
+                    array_push($row, "<a class='btn btn-mini btn-success' title='edit' onclick='showUpdate(\"$val->kel_id\")'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
                         . "<a class='btn btn-mini btn-danger delete' onclick='confirmDelete(\"$val->kel_id\")' title='delete'><i class='icon-trash'></i></a>&nbsp;&nbsp;&nbsp;"
-                        . "<a class='btn btn-mini btn-primary' href='". Yii::app()->request->baseUrl . "/index.php/?r=kelurahan/detil&kel_id=" . $val->kel_id . "' title='Detil Map'><i class='icon-map-marker'></i></a>");
+                        . "<a class='btn btn-mini' href='". Yii::app()->request->baseUrl . "/index.php/?r=kelurahan/detil&kel_id=" . $val->kel_id . "' title='Detil Map'><i class='icon-map-marker'></i></a>");
                 }else if(Yii::app()->user->level=='kelurahan'){
                     if(Yii::app()->user->privilege==$val->kel_id){
-                        array_push($row, "<a class='btn btn-mini btn-warning how-update-kelurahan' title='edit' onclick='showUpdate(\"$val->kel_id\")'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
+                        array_push($row, "<a class='btn btn-mini btn-success' title='edit' onclick='showUpdate(\"$val->kel_id\")'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
                             . "<a class='btn btn-mini' href='". Yii::app()->request->baseUrl . "/index.php/?r=kelurahan/detil&kel_id=" . $val->kel_id . "' title='Detil Map'><i class='icon-map-marker'></i></a>");    
                     }else{
                         array_push($row, "<a class='btn btn-mini' href='". Yii::app()->request->baseUrl . "/index.php/?r=kelurahan/detil&kel_id=" . $val->kel_id . "' title='Detil Map'><i class='icon-map-marker'></i></a>");    
@@ -144,10 +144,13 @@ class KelurahanController extends Controller
             $kelurahan = new Kelurahan();
             $indicator = new Indicator();
             $kecamatan = new Kecamatan();
+            $category = new Category();
+            $listCategory = $category->findAll('ctg_id=ctg_id order by ctg_nama');
+            $defaultCategory = $category->findBySql("select * from category limit 0,1");
             $selectTahun = $kecamatan->getTahunIndicator();
             $dtIndicator = new DtIndicator();
             $kec_nama = Kecamatan::model()->findByPk($model->kec_id);
-            $headerTableIndicator = $indicator->findAll('idc_id=idc_id order by idc_nama'); 
+            
             $data = array();
             array_push($data, $model->kel_id);
             array_push($data, $model->kel_nama);
@@ -157,19 +160,21 @@ class KelurahanController extends Controller
             array_push($data, $kec_nama->kec_nama);
             array_push($data, $kelurahan->getListMonth());
 
-            if(isset($_POST['tahun'])){
-                array_push($data, $_POST['tahun']);
-                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, $_POST['tahun']);
+            if(isset($_POST['tahun']) && isset($_POST['category'])){
+                array_push($data, array($_POST['tahun'], $_POST['category']));
+                $headerTableIndicator = $indicator->findAll('idc_category=:ctg_nama order by idc_nama', array(':ctg_nama'=>$_POST['category'])); 
+                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, $_POST['tahun'], $_POST['category']);
             }else {
-                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, date('Y'));
+                $headerTableIndicator = $indicator->findAll('idc_category=:ctg_nama order by idc_nama', array(':ctg_nama'=>$defaultCategory->ctg_nama)); 
+                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, date('Y'),$defaultCategory->ctg_nama);
             }
-            
             
             $this->render('detil', array(
                     'data' => $data,  
                     'selectTahun' => $selectTahun,  
                     'rowInfoKelurahan' => $rowTableIndicator,
                     'headerTableIndicator' =>$headerTableIndicator,
+                    'listCategory' => $listCategory,
             ));
             
         
@@ -180,6 +185,8 @@ class KelurahanController extends Controller
             $kelurahan = new Kelurahan();
             $indicator = new Indicator();
             $dtIndicator = new DtIndicator();
+            $category = new Category();
+            $listCategory = $category->findAll('ctg_id=ctg_id order by ctg_nama');
             $kecamatan = Kecamatan::model()->findByPk($model->kec_id);
             $headerTableIndicator = $indicator->findAll(); 
             $data = array();
@@ -192,16 +199,19 @@ class KelurahanController extends Controller
             array_push($data, $kelurahan->getListMonth());
 
             if(isset($_POST['tahun'])){
-                array_push($data, $_POST['tahun']);
-                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, $_POST['tahun']);
+                array_push($data, array($_POST['tahun'], $_POST['category']));
+                $headerTableIndicator = $indicator->findAll('idc_id=idc_id order by idc_category'); 
+                $rowTableIndicator = $kelurahan->getDetilAllIndicatorInYears($kel_id, $_POST['tahun']);
             }else {
-                $rowTableIndicator = $kelurahan->getDetilIndicatorInYears($kel_id, date('Y'));
+                $headerTableIndicator = $indicator->findAll('idc_id=idc_id order by idc_category'); 
+                $rowTableIndicator = $kelurahan->getDetilAllIndicatorInYears($kel_id, date('Y'));
             }
             
             $this->renderPartial('print', array(
                     'data' => $data,  
                     'rowInfoKelurahan' => $rowTableIndicator,
                     'headerTableIndicator' =>$headerTableIndicator,
+                    'listCategory'=> $listCategory,
             ));
         
         }
@@ -227,46 +237,30 @@ class KelurahanController extends Controller
                 try{
                     if($indicator->save()){
                         $rowDtIndicatorInserted=0;
+                        //If data tahun exist in Database 
                         if(isset($getYearRows[0]['tahun'])){
                             foreach($getYearRows as $YearRows){
-                                if($YearRows['tahun']==date('Y')){
-                                    foreach($kelurahan->findAll() as $val){
-                                        for($i=1;$i<=12;$i++){
-                                            $dtIndicator = new DtIndicator();
-                                            $dtIndicator->idc_id= $indicator->idc_id;
-                                            $dtIndicator->kel_id= $val->kel_id;
-                                            $dtIndicator->dt_value=0;
-                                            if($i<10){
-                                                $dtIndicator->dt_periode= $YearRows['tahun']."0".$i;
-                                            }else{
-                                                $dtIndicator->dt_periode= $YearRows['tahun'].$i;
-                                            }
-                                            $dtIndicator->dt_last_update = new CDbExpression('NOW()');
-                                            if($dtIndicator->save(false)){
-                                                $rowDtIndicatorInserted++;
-                                            }
+                                foreach($kelurahan->findAll() as $val){
+                                    for($i=1;$i<=12;$i++){
+                                        $dtIndicator = new DtIndicator();
+                                        $dtIndicator->idc_id= $indicator->idc_id;
+                                        $dtIndicator->kel_id= $val->kel_id;
+                                        $dtIndicator->dt_value=0;
+                                        if($i<10){
+                                            $dtIndicator->dt_periode= $YearRows['tahun']."0".$i;
+                                        }else{
+                                            $dtIndicator->dt_periode= $YearRows['tahun'].$i;
                                         }
-                                    }
-                                }else{
-                                    foreach($kelurahan->findAll() as $val){
-                                        for($i=1;$i<=12;$i++){
-                                            $dtIndicator = new DtIndicator();
-                                            $dtIndicator->idc_id= $indicator->idc_id;
-                                            $dtIndicator->kel_id= $val->kel_id;
-                                            $dtIndicator->dt_value=0;
-                                            if($i<10){
-                                                $dtIndicator->dt_periode= date('Y')."0".$i;
-                                            }else{
-                                                $dtIndicator->dt_periode= date('Y').$i;
-                                            }
-                                            $dtIndicator->dt_last_update = new CDbExpression('NOW()');
-                                            if($dtIndicator->save(false)){
-                                                $rowDtIndicatorInserted++;
-                                            }
+                                        $dtIndicator->dt_last_update = new CDbExpression('NOW()');
+                                        $dtIndicator->dt_keterangan = " ";
+                                        if($dtIndicator->save(false)){
+                                            $rowDtIndicatorInserted++;
                                         }
                                     }
                                 }
                             }
+                            
+                        //if database dt indicator is null
                         }else {
                             foreach($kelurahan->findAll() as $val){
                                 for($i=1;$i<=12;$i++){
@@ -280,6 +274,7 @@ class KelurahanController extends Controller
                                         $dtIndicator->dt_periode= date('Y').$i;
                                     }
                                     $dtIndicator->dt_last_update = new CDbExpression('NOW()');
+                                    $dtIndicator->dt_keterangan = " ";
                                     if($dtIndicator->save(false)){
                                         $rowDtIndicatorInserted++;
                                     }
@@ -323,8 +318,9 @@ class KelurahanController extends Controller
                 $idc_id = $_POST['idc_id'];
                 $kel_id = $_POST['kel_id'];
                 $thn = $_POST['tahun'];
+                $ctg_nama = $_POST['ctg_nama'];
                 $kelurahan = new Kelurahan();
-                $rData = $kelurahan->getDetilIndicator($kel_id, $idc_id, $thn);
+                $rData = $kelurahan->getDetilIndicator($kel_id, $idc_id, $thn,$ctg_nama);
                 echo json_encode($rData);
                 
             //for update master data of Indicator name
@@ -380,9 +376,12 @@ class KelurahanController extends Controller
                 $kelurahan = new Kelurahan();
                 $category = new Category();
                 $category->ctg_nama = $_POST['upd-ctg_name'];
+                $old_ctg_nama = $_POST['upd-old_ctg_name'];
                 $category->ctg_id = $_POST['upd-ctg_id'];
                 $category->ctg_last_update = new CDbExpression('NOW()');
                 if($category->updateByPk($_POST['upd-ctg_id'], $category)){
+                    $indicator = new Indicator();
+                    $indicator->updateAll(array('idc_category'=>$_POST['upd-ctg_name']), 'idc_category=:ctg_nama', array(':ctg_nama'=>$old_ctg_nama));
                     Yii::app()->request->redirect("index.php?r=kelurahan&rc=00");
                 }else{
                     throw new CHttpException(556,'Failed Insert Database, The specified post cannot be found.');
@@ -394,10 +393,19 @@ class KelurahanController extends Controller
         public function actiondeleteCategory(){
             if(isset($_POST['deleteCategory'])){
                 $category = new Category();
-                if($category->deleteByPk($_POST['ctg_id'])){
-                    echo "1";
-                }else{
-                    throw new CHttpException(556,'Failed Insert Database, The specified post cannot be found.');
+                $indicator = new Indicator();
+                $ctg = $category->findByPk($_POST['ctg_id']);
+                try {
+                    if(isset($ctg->ctg_nama)){
+                        $indicator->deleteAll('idc_category=:idc_category',array(':idc_category'=>$ctg->ctg_nama));
+                        $category->deleteByPk($_POST['ctg_id']);
+                        echo "1";
+                    }else{
+                        throw new CHttpException(556,'Failed Insert Database, The specified post cannot be found.');
+                    }
+                } catch (Exception $exc) {
+                    echo $exc->getTraceAsString();
+                    throw new CHttpException(091,'Failed Delete Database, The specified post cannot be found.');
                 }
             }else
                 throw new CHttpException(505,'The specified post cannot be found.');

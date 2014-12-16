@@ -259,7 +259,16 @@ class HomeController extends Controller
                 echo json_encode(array('point' => $tPointSearch));
             }
         }
-
+        
+        public function actiondoInsertIndicator(){
+            $dt_indicator = new DtIndicator();
+            $run = $dt_indicator->doInsertDtIndicator();
+            if($run){
+                throw new CHttpException(00,'Sukses Insert DT Indicator');
+            }else{
+                throw new CHttpException(404,'Failed Insert into dt_indicator');
+            }
+        }
 
         public function actions()
 	{

@@ -20,7 +20,7 @@
         <script src="http://code.highcharts.com/modules/drilldown.js"></script>
 
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title>Kementerian Sosial Jakarta Utara</title>
 </head>
 
     <body>

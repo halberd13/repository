@@ -4,11 +4,13 @@
             <h5>
             Category 
             <select id="select-tahun" name="category" onchange="getChart()" style="width: auto;">
-                <?php if(isset($select)){
-                    echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
-                }
+                <?php 
                 foreach($category as $categorys){
-                    echo '<option value="'.$categorys->idc_category.'">'.$categorys->idc_category.'</option>';
+                    if(isset($select[2]) && $categorys->idc_category==$select[2]){
+                        echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
+                    }else{
+                        echo '<option value="'.$categorys->idc_category.'">'.$categorys->idc_category.'</option>';
+                    }
                 }
                 ?>
             </select>
@@ -40,21 +42,22 @@
 <div id="jakut" class="box-chart" ></div>
 
 
-<table id='datatable' class="table table-hover table-striped">
-    <tr><td colspan="8" style="text-align: center;background: transparent;color: #cd0a0a;"><h4><marquee behavior=”scroll”>Informasi Data Indicator Jakarta Utara <?php if(isset($select[0])){ echo $select[0];}else { echo date('D, d M Y');}?></marquee></h4></td></tr>
-    <?php 
-    echo "<tr><td rowspan=2>No</td>"
-    . "<td style='background-color:transparent;text-align: right;'><i>kecamatan</i></td>";
-        foreach($listKecamatan as $val){
-            echo "<td rowspan=2 style='vertical-align:middle;background-color:#DDFFAA;'><b>".$val['kec_nama'].'</b></td>';
-        }
-        
-    echo '</tr>';
-    echo '<tr><td style="background-color:transparent;"><i>indikator</i></td></tr>';
-    $i=0;
-    
+<table class="table table-hover table-striped">
+    <tr><td colspan="100%" style="text-align: center;background: transparent;color: #cd0a0a;"><h4><marquee behavior=”scroll”>Informasi Data Indicator Jakarta Utara <?php if(isset($select[0])){ echo $select[0];}else { echo date('D, d M Y');}?></marquee></h4></td></tr>
+
+        <?php 
+        echo "<tr><td rowspan=2>No</td>"
+        . "<td style='background-color:transparent;text-align: right;'><i>kecamatan</i></td>";
+            foreach($listKecamatan as $val){
+                echo "<td rowspan=2 style='vertical-align:middle;background-color:#DDFFAA;'><b>".$val['kec_nama'].'</b></td>';
+            }
+
+        echo '</tr>';
+        echo '<tr><td style="background-color:transparent;"><i>indikator</i></td></tr>';
+        $i=0;
+        $no=1;
     foreach($namaIndicator as $lists){
-        echo '<tr><td>'.$i.'</td>'
+        echo '<tr><td>'.$no.'</td>'
         . '<td style="background-color:mediumaquamarine;">'.$lists['idc_nama'].'</td>';
         foreach($dataIndicator[$i] as $row){
             if($row['idc_nama']==$lists['idc_nama']){
@@ -62,20 +65,25 @@
             }
         }
         echo '</tr>';
-     $i++;}?>
+     $i++;$no++;}?>
     
-    <tr style="text-align: right;background-color:transparent"></tr>
     <?php if(!Yii::app()->user->isGuest){ ?>
+    <tfoot>
         <tr>
-            <th colspan="9" style="text-align: left;background-color:transparent;">
+            <th colspan="100%" style="text-align: left;background-color:transparent;">
                 <a target="_blank" class="btn btn-small btn-primary" href="<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=jakut/print&thn=<?php if(isset($select[0])){ echo $select[0];}else { echo date('Y');}?>&bln=<?php echo $select[1][0];?>">Print All</a>
             </th>
             
         </tr>
+    </tfoot>
         <?php } ?>
 </table>
 
 <script type="text/javascript" language="javascript">
+    $(document).ready(function (){
+        $('#datatable').dataTable();
+        
+    });
     function getChart(){
         document.getElementById('form-param-chart-jakut').submit();
     }

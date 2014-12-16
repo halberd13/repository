@@ -6,20 +6,20 @@
  * and open the template in the editor.
  */
 if(isset($error)){echo $error;}
-  if(Yii::app()->user->username == 'admin'){?>
+  if(Yii::app()->user->level == 'admin'){?>
         <table class="table table-bordered" id="add-user">
             <tr><th>Form Add New User</th></tr>
             <tr>
                 <td style="text-align: left;">
                     <form name="AddUser" class="form-group" action="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=user/add" role="form" method="post" enctype="multipart/form-data">
                       
-                            <label>Username</label>
+                            <label>Username <b style="color: red;">*</b></label>
                             <input type="text" name="AddUser[username]" placeholder="type username…">
-                            <label>Password</label>
+                            <label>Password <b style="color: red;">*</b></label>
                             <input type="password" name="AddUser[password]" placeholder="type password…">
-                            <label>Email</label>
+                            <label>Email <b style="color: red;">*</b></label>
                             <input type="email" name="AddUser[email]" placeholder="type email…">
-                            <label>Nomor HP</label>
+                            <label>Nomor HP <b style="color: red;">*</b></label>
                             <input type="number" name="AddUser[no_hp]" placeholder="type nomor hp…">
                             <label>Level</label>
                             <select name="AddUser[level]" id="level" onchange="selectLevelAdd()">
@@ -47,6 +47,7 @@ if(isset($error)){echo $error;}
 
                       </div>
                       <div class="modal-footer">
+                          <p>(<b style="color: red;">*</b>) Wajib diisi</p>
                           <button type="button" class="btn btn-default" id="btn-close-add-user">Close</button>
                         <button type="submit" class="btn btn-primary">Save & Close</button>
                       </div>
@@ -82,14 +83,16 @@ if(isset($error)){echo $error;}
                 <?php if(Yii::app()->user->level != 'guest'){?>
                 <td>
                     <a class='btn btn-mini btn-success btn-xs' title='edit' onclick="showUpdate('<?php echo $val['user_id'];?>')"><i class='icon-pencil'></i></a>&nbsp;
-                    <?php  if(Yii::app()->user->username == 'admin'){?>
+
+                    <?php  if(Yii::app()->user->level == 'admin'){?>
                     <a class='btn btn-mini btn-danger' onclick="deleteUser('<?php echo $val['user_id'];?>')" title='delete'><i class='icon-trash'></i></a>
+                    <a class='btn btn-mini btn-xs' title='Ubah Password' onclick="changePassword('<?php echo $val['user_id'];?>')"><i class='icon-lock'></i></a>&nbsp;
                     <?php } ?>
                 </td>
             <?php } $i++;}?>
             </tr>
             <tfoot>
-                <?php if(Yii::app()->user->username == 'admin'){?>
+                <?php if(Yii::app()->user->level == 'admin'){?>
                 <tr>
                     <td colspan="7">
                         <button id="btn-add-user" class="btn btn-small btn-primary">Tambah</button>
@@ -115,14 +118,10 @@ if(isset($error)){echo $error;}
                   <input type="hidden" name="User[user_id]" id="upd-user_id">
                     <label>Username</label>
                     <input type="text" name="User[username]" id="upd-username">
-                    <label>Password</label>
-                    <input type="password" name="User[password]" id="upd-password">
-                    <label>Retype Password</label>
-                    <input type="password" name="User[password2]" id="upd-password2">
                     <label>Email</label>
-                    <input type="email" name="User[email]" onclick="checkPassword()" id="upd-email">
+                    <input type="email" name="User[email]" id="upd-email">
                     <label>No HP</label>
-                    <input type="number" name="User[no_hp]" id="upd-no_hp">
+                    <input type="text" name="User[no_hp]" id="upd-no_hp">
                     <?php if(Yii::app()->user->level == 'admin'){?>
                         <label>Level</label>
                         <select name="User[level]" id="upd-level" onchange="selectLevel()">
@@ -150,7 +149,7 @@ if(isset($error)){echo $error;}
                     <?php }?>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" onke data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
       </form>
@@ -158,10 +157,32 @@ if(isset($error)){echo $error;}
   </div>
 </div>  
 
+<div class="modal fade" id="modal-update-user-password" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Form Update User Password</h4>
+      </div>
+        <form name="UserPassword" class="form-group" action="<?php echo Yii::app()->request->baseUrl;?>/index.php?r=user/update" role="form" method="post" enctype="multipart/form-data">
+          <div class="modal-body">
+                    <label>New Password</label>
+                    <input type="hidden" name="user_id" id="pwd-user_id" value="">
+                    <input type="password" name="new_password" id="new_password">
+                    <label>Retype New Password</label>
+                    <input type="password" name="r_new_password" id="r_new_password">
+          </div>
+          <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-warning">Close</button>
+              <button type="button" id="btn-save-change-password" data-dismiss="modal" class="btn btn-primary">Save & Close</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div> 
 
 
         
-
 
 
 
@@ -174,8 +195,31 @@ if(isset($error)){echo $error;}
        $('#select-kecamatan').hide();
        $('#upd-select-kelurahan').hide();
        $('#upd-select-kecamatan').hide();
+       $('#modal-update-new-password').hide();
+       $('#modal-update-user-password').hide();
        
        
+       //validate old password
+       $('#btn-save-change-password').click(function (){
+           if(checkPassword()){
+               user_id = $('#pwd-user_id').val();
+               new_password = $('#new_password').val();
+               var url =  "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=user/changePassword"
+                    $.post(url , { changePassword : true ,user_id : user_id, new_password : new_password } )
+                        .done(function(data){
+                            if(data==1){
+                             alert("Password berhasil diupdate");
+                             location.reload();
+                            }else{
+                                alert("Password gagal diupdate");
+                            }
+                        });
+            }else {
+                return false;
+            }
+               
+           
+       });
        
        //for add field on modal add user
        $('#btn-add-user').click(function (){
@@ -189,16 +233,18 @@ if(isset($error)){echo $error;}
     
     //for check same password 
     function checkPassword(){
-       pass1=$('#upd-password').val();
-       pass2=$('#upd-password2').val();
+       pass1=$('#new_password').val();
+       pass2=$('#r_new_password').val();
        if(pass1!=pass2){
-           alert("Password tidak benar, silahkan isi dengan benar !");
+           alert("Password tidak sama, silahkan isi dengan benar !");
+           return false;
+       }else{
+           return true;
        }
-       
+      
     }
     
     function selectLevel(){
-        
         $('#upd-select-kelurahan').slideUp();
         $('#upd-select-kecamatan').slideUp();
         tSelectedUpd = $('#upd-level').val();
@@ -216,8 +262,8 @@ if(isset($error)){echo $error;}
                     var tData = JSON.parse(data);
                     $('#upd-user_id').val(tData[0]);
                     $('#upd-username').val(tData[1]);
-                    $('#upd-email').val(tData[3]);
-                    $('#upd-no_hp').val(tData[4]);
+                    $('#upd-email').val(tData[2]);
+                    $('#upd-no_hp').val(tData[3]);
                 });
             $('#modal-update-user').modal('show');
             
@@ -237,6 +283,13 @@ if(isset($error)){echo $error;}
     }
     
     
+    function changePassword(user_id){
+        $('#pwd-user_id').val(user_id);
+        $('#new_password').val("");            
+        $('#r_new_password').val("");            
+        $('#modal-update-user-password').modal('show');            
+    }
+    
     function deleteUser(user_id){
         if (!confirm('Anda yakin ingin menghapus data ini ?'))
             return false;
@@ -253,9 +306,12 @@ if(isset($error)){echo $error;}
     var rc = <?php if(isset($_GET['rc'])){echo $_GET['rc'];}else echo "null";?>;
     if(rc=='01'){
         alert('Password tidak sama');
+        location.href = "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=user";
     }else if(rc=='88'){
         alert('Data gagal ditambahkan, Silahkan periksa kembali');
+        location.href = "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=user";
     }else if(rc=='00'){
         alert('Data berhasil diupdate');
+        location.href = "<?php echo Yii::app()->request->baseUrl;?>/index.php/?r=user";
     } 
 </script>

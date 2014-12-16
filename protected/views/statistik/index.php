@@ -2,31 +2,37 @@
         <form name="form-kelurahan" id="form-param-chart-kelurahan" method="POST" action="<?php echo Yii::app()->homeUrl; ?>/?r=statistik&req=one">
             <h5>Pilih Kelurahan <select id="select-kelurahan" name="kel_id" onchange="getChart()">
             <?php 
-            if(isset($select)){
-                echo '<option selected value="'.$select[0].'">'.$select[1].'</option>';
-            }
+            
             for($i=0;$i<count($listKelurahan);$i++){
-                echo '<option value="'.$listKelurahan[$i]['kel_id'].'">'.$listKelurahan[$i]['kel_nama'].'</option>';
+                if(isset($select[1]) && $select[1]==$listKelurahan[$i]['kel_nama']){
+                    echo '<option selected value="'.$listKelurahan[$i]['kel_id'].'">'.$listKelurahan[$i]['kel_nama'].'</option>';
+                }else{
+                    echo '<option value="'.$listKelurahan[$i]['kel_id'].'">'.$listKelurahan[$i]['kel_nama'].'</option>';
+                }
             }?>
         </select>
         Category
         <select id="select-category" onchange="getChart()" name="category" style="width: auto;">
-            <?php if(isset($select)){
-                echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
-            }
+            <?php 
             foreach($listCategory as $lists){
-                echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                if(isset($select[2]) && $select[2]==$lists->ctg_nama){
+                    echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
+                }else{
+                    echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                }
             }
             ?>
             
         </select>
         Tahun 
         <select id="select-tahun" onchange="getChart()" name="tahun" style="width: auto;">
-            <?php if(isset($select[3])){
-                echo '<option selected value="'.$select[3].'">'.$select[3].'</option>';
-            }
+            <?php 
             foreach($selectTahun as $thns){
-                echo "<option value='".$thns['tahun']."'>".$thns['tahun']."</option>";
+                if(isset($select[3]) && $select[3]== $thns['tahun']){
+                    echo '<option selected value="'.$select[3].'">'.$select[3].'</option>';
+                }else{
+                    echo "<option value='".$thns['tahun']."'>".$thns['tahun']."</option>";
+                }
              }?>  
         </select>
         </h5>
@@ -37,33 +43,37 @@
             <h5>
             Category
             <select id="select-category" onchange="getChartAll()" name="category" style="width: auto;">
-                <?php if(isset($select)){
-                    echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
-                }
+                <?php 
                 foreach($listCategory as $lists){
-                    echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                    if(isset($select[2]) && $select[2]==$lists->ctg_nama){
+                        echo '<option selected value="'.$select[2].'">'.$select[2].'</option>';
+                    }else{
+                        echo '<option value="'.$lists->ctg_nama.'">'.$lists->ctg_nama.'</option>';
+                    }
                 }
                 ?>
             </select>
             Tahun 
             <select id="select-tahun" name="tahun" onchange="getChartAll()" style="width: auto;">
-                <?php if(isset($select)){
-                    echo '<option selected value="'.$select[3].'">'.$select[3].'</option>';
-                }
+                <?php 
                 foreach($selectTahun as $thns){
-                    echo "<option value='".$thns['tahun']."'>".$thns['tahun']."</option>";
+                    if(isset($select[3]) && $select[3]==$thns['tahun']){
+                        echo '<option selected value="'.$select[3].'">'.$select[3].'</option>';
+                    }else{
+                        echo "<option value='".$thns['tahun']."'>".$thns['tahun']."</option>";
+                    }
                  }?>  
             </select>
             Bulan
             <select id="select-bulan" name="bulan" onchange="getChartAll()" style="width: auto;">
                 <?php 
-                if(isset($select[4])){
-                    echo '<option selected value="'.$select[4][0].'">'.$select[4][1].'</option>';
-                }
-                
-                    foreach($category_bulan as $key=>$bulan){?>
-                    <option value="<?php echo $key;?>"><?php echo $bulan;?></option>
-                    <?php }?>
+                    foreach($category_bulan as $key=>$bulan){
+                        if(isset($select[4][0]) && $key==$select[4][0]){
+                            echo '<option selected value="'.$select[4][0].'">'.$select[4][1].'</option>';
+                        }else{
+                            echo '<option value="'.$key.'">'.$bulan.'</option>';
+                        }
+                    }?>
             </select>
             </h5>
         </form>

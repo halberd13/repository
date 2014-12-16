@@ -43,11 +43,9 @@ return array(
                         'class' => 'application.components.UnderConstruction',
                         'allowedIPs'=>array('127.0.0.1','localhost','192.168.78.190'), //whatever IPs you want to allow
                         'locked'=>false,//this is the on off switch
-                        'redirectURL'=>'http://www.gsp.co.id',
+                        'redirectURL'=>'http://www.google.co.id',
                     ),
-                'swiftMailer' => array(
-                    'class' => 'ext.swiftMailer.SwiftMailer',
-                ),    
+                
                 
 		// uncomment the following to enable URLs in path-format
 		/*

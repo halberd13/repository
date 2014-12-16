@@ -10,7 +10,7 @@ class StatistikController extends Controller
             $indicator = new Indicator();
             $category = new Category();
             $listCategory = $category->findAll();
-            $listKelurahan = $kelurahan->findAll('kel_id=kel_id order by kel_nama');
+            $listKelurahan = $kelurahan->findAll('kel_id=kel_id order by kec_id');
             $categoryBulan = $kelurahan->getListMonth();
             $categoryKecamatan=array();
             $seriesKecamatan=array();
@@ -21,7 +21,7 @@ class StatistikController extends Controller
             $tahun=date('Y');
             $selectTahun=$kecamatan->getTahunIndicator();
             $bulan=date('m');
-            $dCategory='Sosial';
+            $dCategory=null;
             
             if(isset($_GET['req'])&& $_GET['req']=='one'){
                 $kel_id=$_POST['kel_id'];
@@ -41,26 +41,33 @@ class StatistikController extends Controller
                 $kel_nama=$listKelurahan[0]['kel_nama'];
                 $tahun=date('Y');
                 $bulan='01';
-                $dCategory='Sosial';
-                
+                $dCategory=$listCategory[0]['ctg_nama'];
             }
                   
             //get Highchart query
             $namaIndicator = $indicator->findAll('idc_category=:idc_category',array(':idc_category'=>$dCategory));
+            $i=0;
             foreach($namaIndicator as $ctg){
                     $list = $kelurahan->getDataIndicatorKelurahan($ctg->idc_id, $tahun.$bulan);
                     $rList = array();
+                    
                     foreach($list as $lists){
                         array_push($rList, (int)$lists['dt_value']);
+                        //Category highChart For All Kelurahan
+                        if($i==0){
+                            array_push($categoryKelurahan, $lists['kel_nama']);
+                        }
                     }
                     array_push($seriesKelurahan, array('name' => $ctg->idc_nama,'tooltip' => array( 'valueSuffix'=> ' '.$ctg->idc_satuan) ,'data'=>$rList));
+            $i++;
             }    
+            
                     
             $listIndicator = $indicator->findAllByAttributes(array('idc_category'=>$dCategory));
-            //Category highChart For All Kelurahan 
-                foreach($listKelurahan as $ctg){
-                    array_push($categoryKelurahan, 'Kel. '.$ctg['kel_nama']);
-                }        
+             
+//            foreach($listKelurahan as $ctg){
+//                array_push($categoryKelurahan, 'Kel. '.$ctg['kel_nama']);
+//            }        
             //This code for high chart per Month in Kelurahan
             foreach($listIndicator as $dt){
                 $rowData = array();

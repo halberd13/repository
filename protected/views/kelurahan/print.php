@@ -16,37 +16,37 @@
 <div class="container-fluid">
 <table  class="table table-striped table-hover" style="min-width: 800px;">
         <tr>
-            <th colspan="15" style="text-align: center;"><h3>Rincian Informasi Kelurahan</h3></th>
+            <th colspan="16" style="text-align: center;"><h4>Rincian Informasi Kelurahan</h4></th>
         </tr>
         <tr>
-            <th colspan="2">Nama Kecamatan</th>
+            <th colspan="2" style="text-align: left;">Nama Kecamatan</th>
             <th>:</th>
-            <th colspan="4"><?php echo $data[5];?></th>
+            <th colspan="4" style="text-align: left;"><?php echo $data[5];?></th>
             <th rowspan="5" colspan="10" style="text-align: center;max-width: 360px;"><img id="img-map"/></th>
         </tr>
         <tr>
-            <th colspan="2">Nama Kelurahan</th>
+            <th colspan="2" style="text-align: left;">Nama Kelurahan</th>
             <th>:</th>
-            <th colspan="4"><?php echo $data[1];?></th>
+            <th colspan="4" style="text-align: left;"><?php echo $data[1];?></th>
         </tr>
         <tr>
-            <th colspan="2">Alamat</th>
+            <th colspan="2" style="text-align: left;">Alamat</th>
             <th>:</th>
-            <th colspan="4"><?php echo $data[2];?></th>
+            <th colspan="4" style="text-align: left;"><?php echo $data[2];?></th>
         </tr>
         <tr>
-            <th colspan="2">Lintang</th>
+            <th colspan="2" style="text-align: left;">Lintang</th>
             <th>:</th>
-            <th colspan="4"><?php echo $data[3];?></th>
+            <th colspan="4" style="text-align: left;"><?php echo $data[3];?></th>
         </tr>
         <tr>
-            <th colspan="2">Bujur</th>
+            <th colspan="2" style="text-align: left;">Bujur</th>
             <th>:</th>
-            <th colspan="4"><?php echo $data[4];?></th>
+            <th colspan="4" style="text-align: left;"><?php echo $data[4];?></th>
         </tr>
         <tr>
-            <th colspan="15" style="text-align: center;">
-                Informasi Indicator Kelurahan Tahun <?php if($_GET['thn']!=null){ echo $_GET['thn'];}else echo date('Y');?>
+            <th colspan="16" style="text-align: center;">
+                <h4>Informasi Indicator Kelurahan Tahun <?php if($_GET['thn']!=null){ echo $_GET['thn'];}else echo date('Y');?></h4>
             </th>
         </tr>
                 <tr>
@@ -54,40 +54,48 @@
                     <td style="text-align: right;background-color: transparent;" ><i>Month</i></td>
                     <?php 
                     foreach($data[6] as $key=>$bulan){
-                       echo '<th rowspan=2 style="text-align: center;vertical-align: middle;background-color:lightgreen;">'.$bulan.'</th>'; 
+                       echo '<th rowspan=2 style="text-align: center;vertical-align: middle;">'.$bulan.'</th>'; 
                        
                     }
+                    echo "<th rowspan=2 style='text-align: center;vertical-align: middle;'>Satuan</th>";
 
                     ?>
                 </tr>
                 <tr>
-                    <td style="background-color: transparent;"><i>Data Indicator</i></td>
+                    <td style="background-color:  transparent;"><i>Data Indicator</i></td>
                 </tr>
                 <?php 
-                $no=1;
-                    for($i=0;$i<count($headerTableIndicator);$i++){
-                        $totalRow=0;
-                        echo "<tr><td>".$no."</td>"
-                        . "<th style='background-color: lightsteelblue;'>".$headerTableIndicator[$i]['idc_nama']."</th>";
-                            for($x=0; $x<count($rowInfoKelurahan);$x++){
-                                $rowTahun = substr($rowInfoKelurahan[$x]['dt_periode'],0,-2);
-                                if($headerTableIndicator[$i]['idc_id']==$rowInfoKelurahan[$x]['idc_id']){
-                                    if(isset($data[7]) && $rowTahun==$data[7]){
-                                        echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
-                                        $totalRow=$totalRow+$rowInfoKelurahan[$x]['dt_value'];
-                                    }else if($rowTahun==date('Y')){
-                                        echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
-                                        $totalRow=$totalRow+$rowInfoKelurahan[$x]['dt_value'];
-                                    }else{
-                                            echo "<td>empty</td>";
-                                    }
-                                    
+                
+                    foreach($listCategory as $ctgs){
+                        echo "<tr><td colspan='15' style='background-color: cornsilk;color: #ff0000;'><b>".$ctgs->ctg_nama."</b></td></tr>";
+                        $no=1;
+                        for($i=0;$i<count($headerTableIndicator);$i++){
+                            if($ctgs->ctg_nama==$headerTableIndicator[$i]['idc_category']){
+
+                                echo "<tr><td>".$no."</td>"
+                                . "<th style='background-color: lightsteelblue;text-align: left;'>".$headerTableIndicator[$i]['idc_nama']."</th>";
+
+                                for($x=0; $x<count($rowInfoKelurahan);$x++){
+                                        $rowTahun = substr($rowInfoKelurahan[$x]['dt_periode'],0,-2);
+                                        if($headerTableIndicator[$i]['idc_id']==$rowInfoKelurahan[$x]['idc_id']){
+                                            if(isset($data[7][0]) && $rowTahun==$data[7][0]){
+                                                echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
+                                            }else if($rowTahun==date('Y')){
+                                                echo "<td style='text-align: center;'>".$rowInfoKelurahan[$x]['dt_value']."</td>";
+                                            }else{
+                                                    echo "<td>empty</td>";
+                                            }
+
+                                        }
+
                                 }
-                                    
+                                echo "<td><i>".$headerTableIndicator[$i]['idc_satuan']."</i></td>";                                  
+
+                                echo "</tr>";
+                                
                             }
-                            
-                        echo "</tr>";
                         $no++;
+                        }
                     }
                 ?>
         <?php if(!Yii::app()->user->isGuest){ ?>
@@ -109,7 +117,7 @@
     
 var lat = <?php echo $data[3];?>;
 var lng = <?php echo $data[4];?>;
-var src = 'http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=380x260&markers=color:red|' + lat + ',' + lng + '&maptype=roadmap';
+var src = 'http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=400x260&markers=color:red|' + lat + ',' + lng + '&maptype=roadmap';
 
         
         

@@ -137,9 +137,24 @@ class Kecamatan extends CActiveRecord
         }
         
         
-        public static function getTotalIndicatorPerMonth($kec_id, $idc_id , $tahun){
+        public static function getTotalIndicatorPerMonth($kec_id, $idc_id , $tahun, $ctg_nama){
             $list = Yii::app()->db->createCommand()
-                    ->select('b.idc_id,sum(a.dt_value) as dt_value, a.dt_periode, b.idc_satuan')
+                    ->select('b.idc_nama,b.idc_id,sum(a.dt_value) as dt_value, a.dt_periode, b.idc_category ,b.idc_satuan')
+                    ->from('dt_indicator a')
+                    ->join('indicator b', 'a.idc_id = b.idc_id')
+                    ->join('kelurahan c', 'c.kel_id=a.kel_id')
+                    ->join('kecamatan d', 'c.kec_id=d.kec_id')
+                    ->where('b.idc_id=:idc_id and d.kec_id=:kec_id and left(a.dt_periode,4)=:tahun and b.idc_category=:ctg_nama', array(':idc_id'=>$idc_id,':kec_id'=>$kec_id,':tahun'=>$tahun, ':ctg_nama'=>$ctg_nama))
+                    ->group('a.dt_periode')
+                    ->order('a.dt_periode')
+                    ->queryAll();
+            
+            return $list;
+        }
+        
+        public static function getTotalAllIndicatorPerMonth($kec_id, $idc_id , $tahun){
+            $list = Yii::app()->db->createCommand()
+                    ->select('b.idc_nama,b.idc_id,sum(a.dt_value) as dt_value, a.dt_periode, b.idc_category ,b.idc_satuan')
                     ->from('dt_indicator a')
                     ->join('indicator b', 'a.idc_id = b.idc_id')
                     ->join('kelurahan c', 'c.kel_id=a.kel_id')
@@ -185,7 +200,7 @@ class Kecamatan extends CActiveRecord
         public static function getDataIndicatorJakarta($dt_periode,$idc_category=null){
             if($idc_category==null){
                 $list = Yii::app()->db->createCommand()
-                    ->select('b.idc_id, a.idc_nama,sum(b.dt_value) as dt_value,  b.dt_periode , a.idc_satuan')
+                    ->select('b.idc_id, a.idc_nama,sum(b.dt_value) as dt_value,a.idc_category,  b.dt_periode , a.idc_satuan')
                     ->from('indicator a')
                     ->join('dt_indicator b', 'a.idc_id = b.idc_id')
                     ->join('kelurahan c', 'b.kel_id=c.kel_id')
@@ -213,7 +228,7 @@ class Kecamatan extends CActiveRecord
         
         public static function getIndicatorPerKecamatan($idc_id, $dt_periode){
             $list = Yii::app()->db->createCommand()
-                    ->select('d.kec_nama, a.idc_nama,sum(b.dt_value) as dt_value,  b.dt_periode , a.idc_satuan')
+                    ->select('d.kec_nama, a.idc_nama,sum(b.dt_value) as dt_value,  b.dt_periode , a.idc_satuan, a.idc_category')
                     ->from('indicator a')
                     ->join('dt_indicator b', 'a.idc_id = b.idc_id')
                     ->join('kelurahan c', 'b.kel_id=c.kel_id')

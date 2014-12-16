@@ -6,7 +6,7 @@
 
 <div class="container-fluid" id="printableArea">
     
-<table class="table table-striped table-hover" id="page-table" >
+<table class="table table-hover" id="page-table" >
         <tr>
             <th colspan="15" style="text-align: center;"><h4>Rincian Informasi Kecamatan</h4></th>
         </tr>
@@ -33,31 +33,37 @@
         </tr>
         <tr>
             <th colspan="15" style="text-align: center;"> 
-                Informasi Data Indicator <?php $_GET['thn'];?>
+        <h4>Informasi Data Indicator <?php if(isset($_GET['thn'])){echo $_GET['thn'];}else echo date('Y');?></h4>
             </th>
         </tr>
         <?php 
         echo "<tr><td rowspan='2' style='text-align: center;'>No</td>"
         . "<td style='text-align: right;background-color: transparent;'><i>Month</i></td>";
         foreach($listMonth as $key=>$month){
-            echo "<th rowspan=2 style='text-align: center;vertical-align: middle;background-color:lightgreen;'>".$month."</th>";
+            echo "<th rowspan=2 style='text-align: center;vertical-align: middle;'>".$month."</th>";
         }
-        echo "<th rowspan=2 style='text-align: center;vertical-align: middle;background-color:lightgreen;'>Satuan</th>";
+        echo "<th rowspan=2 style='text-align: center;vertical-align: middle;'>Satuan</th>";
         echo "</tr>";
         echo "<tr><td style='text-align: left;background-color: transparent;'><i>Indikator</i></td></tr>";
         $x=0;
         $no=1;
-        foreach($listIndicator as $listIndicators){
-            echo "<tr><td>".$no."</td>"
-            . "<th style='background-color: lightsteelblue;'>".$listIndicators->idc_nama."</th>";
+        foreach($listCategory as $ctgs){
+            echo "<tr><td colspan='15' style='background-color: cornsilk;color: #ff0000;'><b>".$ctgs->ctg_nama."</b></td></tr>";
             
-            for($i=0;$i<12;$i++){
-                echo "<td style='text-align: center;'>".$dataIndicator[$x][$i]['dt_value']."</td>";
+            foreach($listIndicator as $listIndicators){
+            
+                if($ctgs->ctg_nama == $listIndicators->idc_category){
+                    echo "<tr><td>".$no."</td>"
+                    . "<th style='background-color: lightsteelblue;'>".$listIndicators->idc_nama."</th>";
+                    for($i=0;$i<12;$i++){
+                        echo "<td style='text-align: center;'>".$dataIndicator[$x][$i]['dt_value']."</td>";
+                    }
+                    echo '<td style="text-align: left;">'.$listIndicators->idc_satuan.'</td>';
+                    echo "</tr>";
+                    $x++;
+                    $no++;
+                }
             }
-            echo '<td style="text-align: left;">'.$listIndicators->idc_satuan.'</td>';
-            echo "</tr>";
-        $x++;
-        $no++;
         }?>
         <tr>
             <th colspan="4">

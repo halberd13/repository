@@ -123,4 +123,27 @@ class DtIndicator extends CActiveRecord
                     ->queryAll();
             return $row;
         }
+        
+        public static function doInsertDtIndicator(){
+            $status = false;
+            $connection=Yii::app()->db;
+            $transaction=$connection->beginTransaction();
+            try {
+                $sql='insert into dt_indicator (idc_id,kel_id,dt_value,dt_periode,dt_last_update, dt_keterangan)
+                    select idc_id,kel_id,"0", concat(left(now(),4),right(dt_periode,2)), now(), "empty"
+                    from dt_indicator
+                    where left(dt_periode,4)=left(now(),4)-1
+                    order by dt_id';
+                if ($run =  Yii::app()->db->createCommand($sql)->execute()){
+                    $transaction->commit();
+                    $status = true;
+                }
+            }
+            catch(Exception $e) // an exception is raised if a query fails
+            {
+                $transaction->rollback();
+            }
+            
+            return $status; 
+        }
 }

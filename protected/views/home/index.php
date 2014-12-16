@@ -45,7 +45,6 @@
 }
 
 </style>
-
         <div id="map-canvas" class="map"></div>
         <div id="choose-map" class="btn-group choose-map" data-toggle="buttons-checkbox">
             <button id="click-kec" type="button" class="btn btn-small btn-danger"><strong>Kecamatan</strong></button>

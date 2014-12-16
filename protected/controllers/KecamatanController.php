@@ -18,7 +18,7 @@ class KecamatanController extends Controller
                 array_push($row, $val->kec_kordinat_x);
                 array_push($row, $val->kec_kordinat_y);
                 if(Yii::app()->user->level=='admin'){ 
-                    array_push($row, "<a class='btn btn-mini btn-warning btn-xs show-update-kecamatan' onclick='showUpdate(\"$val->kec_id\")' title='edit'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
+                    array_push($row, "<a class='btn btn-mini btn-success btn-xs show-update-kecamatan' onclick='showUpdate(\"$val->kec_id\")' title='edit'><i class='icon-pencil'></i></a>&nbsp;&nbsp;&nbsp;"
                         . "<a class='btn btn-mini btn-danger delete' onclick='confirmDelete(\"$val->kec_id\")' title='delete'><i class='icon-trash'></i></a>&nbsp;&nbsp;&nbsp;"
                         . "<a class='btn btn-mini' href='". Yii::app()->request->baseUrl . "/index.php/?r=kecamatan/detil&kec_id=" . $val->kec_id . "' title='Detil Map'><i class='icon-map-marker'></i></a>");
                     
@@ -106,6 +106,13 @@ class KecamatanController extends Controller
             $kelurahan = new Kelurahan();
             $indicator = new Indicator();
             $kecamatan = new Kecamatan();
+            $category = new Category();
+            $listCategory = $category->findAll('ctg_id=ctg_id order by ctg_nama');
+            $defaultCategory = $category->findBySql('select * from category limit 0,1');
+            $selectTahun=$kecamatan->getTahunIndicator();
+            $listMonth = $kelurahan->getListMonth();
+            
+            $arrDtIndicatorKecamatan=array();
             $data = array();
             array_push($data, $model->kec_id);
             array_push($data, $model->kec_nama);
@@ -114,24 +121,20 @@ class KecamatanController extends Controller
             array_push($data, $model->kec_kordinat_y);
             array_push($data, $model->kec_icon_map);
             
-            $selectTahun=$kecamatan->getTahunIndicator();
-            $listMonth = $kelurahan->getListMonth();
-            $listIndicator=$indicator->findAll('idc_id=idc_id order by idc_nama');
-            $arrDtIndicatorKecamatan=array();
-            if(isset($_POST['tahun'])){
-                array_push($data, $_POST['tahun'] );
-                //get data for table indicator every kecamatan for tahun selected
-                $arrTotalIndicator = array();
+            if(isset($_POST['tahun']) && isset($_POST['ctg_nama'])){
+                array_push($data, array($_POST['tahun'], $_POST['ctg_nama']) );
+                $listIndicator=$indicator->findAll('idc_category=:ctg_nama order by idc_nama', array(':ctg_nama'=>$_POST['ctg_nama']));
+                //get data for table indicator every kecamatan for tahun and category selected
                 foreach($listIndicator as $listIndicators){
-                    array_push($arrTotalIndicator, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], $_POST['tahun']));
+                    array_push($arrDtIndicatorKecamatan, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], $_POST['tahun'],  $_POST['ctg_nama']));
                 }    
                 
             }else{
-                array_push($data, date('Y'));
-                //get data for table indicator every kecamatan for tahun selected
-                $arrTotalIndicator = array();
+                array_push($data, array(date('Y'),$defaultCategory->ctg_nama ));
+                $listIndicator=$indicator->findAll('idc_category=:ctg_nama order by idc_nama', array(':ctg_nama'=>$defaultCategory->ctg_nama));
+                //get data for table indicator every kecamatan for tahun and cateogry selected
                 foreach($listIndicator as $listIndicators){
-                    array_push($arrTotalIndicator, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], date('Y')));
+                    array_push($arrDtIndicatorKecamatan, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], date('Y'), $defaultCategory->ctg_nama));
                 }    
             }
                 
@@ -139,9 +142,10 @@ class KecamatanController extends Controller
             $this->render('detil', array(
                 'data' => $data, 
                 'selectTahun' => $selectTahun, 
-                'dataIndicator'=> $arrTotalIndicator,
+                'dataIndicator'=> $arrDtIndicatorKecamatan,
                 'listMonth' => $listMonth,
                 'listIndicator' => $listIndicator,
+                'listCategory' => $listCategory,
                     
             ));
         
@@ -153,6 +157,7 @@ class KecamatanController extends Controller
             $kelurahan = new Kelurahan();
             $indicator = new Indicator();
             $kecamatan = new Kecamatan();
+            $category = new Category();
             $data = array();
             array_push($data, $model->kec_id);
             array_push($data, $model->kec_nama);
@@ -164,13 +169,14 @@ class KecamatanController extends Controller
             $selectTahun=$kecamatan->getTahunIndicator();
             $listMonth = $kelurahan->getListMonth();
             $listIndicator=$indicator->findAll('idc_id=idc_id order by idc_nama');
+            $listCategory = $category->findAll('ctg_id=ctg_id order by ctg_nama');
             $arrDtIndicatorKecamatan=array();
             if(isset($_POST['tahun'])){
                 array_push($data, $_POST['tahun'] );
                 //get data for table indicator every kecamatan for tahun selected
                 $arrTotalIndicator = array();
                 foreach($listIndicator as $listIndicators){
-                    array_push($arrTotalIndicator, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], $_POST['tahun']));
+                    array_push($arrTotalIndicator, $kecamatan->getTotalAllIndicatorPerMonth($kec_id, $listIndicators['idc_id'], $_POST['tahun']));
                 }    
                 
             }else{
@@ -178,7 +184,7 @@ class KecamatanController extends Controller
                 //get data for table indicator every kecamatan for tahun selected
                 $arrTotalIndicator = array();
                 foreach($listIndicator as $listIndicators){
-                    array_push($arrTotalIndicator, $kecamatan->getTotalIndicatorPerMonth($kec_id, $listIndicators['idc_id'], date('Y')));
+                    array_push($arrTotalIndicator, $kecamatan->getTotalAllIndicatorPerMonth($kec_id, $listIndicators['idc_id'], date('Y')));
                 }    
             }
                 
@@ -189,6 +195,7 @@ class KecamatanController extends Controller
                 'dataIndicator'=> $arrTotalIndicator,
                 'listMonth' => $listMonth,
                 'listIndicator' => $listIndicator,
+                'listCategory' => $listCategory,
                     
             ));
         
